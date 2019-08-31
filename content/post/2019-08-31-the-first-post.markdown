@@ -1,0 +1,24 @@
+---
+title: The first post
+author: Mara Alexeev
+date: '2019-08-31'
+slug: the-first-post
+categories: []
+tags: []
+---
+
+This is my first post on my new website built with the R package blogdown, the help of many online help pages, and my lovely husband. I am using Github and Netlify as well. I don't have the energy to write a post about how I built this, but here is the list of things that caused pain: 
+
+* in my config.toml file I had replaced the baseurl default of `baseurl = "/"` with `baseurl = "https://www.maraalexeev.com"`
+ * this causes problems so just keep it as the /
+
+* on Netlify there is a deploy setting that I did incorrectly so my page worked locally but not online
+ * Answer [here](https://community.netlify.com/t/common-issue-i-ve-deployed-my-site-but-i-still-see-page-not-found/125/2)
+ 
+Overall, this was an amazing but slightly frustrating experience with most of the frustration being at the deployment phase. Now that I have site up and running, I am beyond excited to start doing more with it. I especially am excited about figuring out how to have my data easily accessible for someone re-running my analysis in something that I post. 
+ 
+A few quick things that I hope to do soon are: 
+
+1) Understand more of what an R project means and how to use it in my workflow
+2) Figure out how to store files and content in a reasonable method
+3) Get amazing at Rmarkdown

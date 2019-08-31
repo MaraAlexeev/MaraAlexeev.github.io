@@ -6,9 +6,17 @@ googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+    
 [[menu.main]]
     name = "About"
     url = "/about/"
+    
+[[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    
 [[menu.main]]
     name = "GitHub"
     url = "https://github.com/MaraAlexeev"
