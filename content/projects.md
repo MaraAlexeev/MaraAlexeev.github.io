@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 author: "Mara Alexeev"
-date: "8/31/2019"
+date: "2019-08-31"
 ---
 
 # Teaching
