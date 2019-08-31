@@ -19,6 +19,6 @@ Overall, this was an amazing but slightly frustrating experience with most of th
  
 A few quick things that I hope to do soon are: 
 
-1) Understand more of what an R project means and how to use it in my workflow
-2) Figure out how to store files and content in a reasonable method
-3) Get amazing at Rmarkdown
+1. Understand more of what an R project means and how to use it in my workflow
+2. Figure out how to store files and content in a reasonable method
+3. Get amazing at Rmarkdown
