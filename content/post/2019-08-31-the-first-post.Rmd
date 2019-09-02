@@ -1,5 +1,5 @@
 ---
-title: The first post
+title: The first post of the new website
 author: Mara Alexeev
 date: '2019-08-31'
 slug: the-first-post
@@ -25,3 +25,4 @@ A few quick things that I hope to do soon are:
 1. Understand more of what an R project means and how to use it in my workflow
 2. Figure out how to store files and content in a reasonable method
 3. Get amazing at Rmarkdown
+4. Upload old content from my previous website

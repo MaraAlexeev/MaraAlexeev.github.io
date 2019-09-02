@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on A Hugo website</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on A Hugo website</description>
+    <title>pediatrics on A Hugo website</title>
+    <link>/tags/pediatrics/</link>
+    <description>Recent content in pediatrics on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 02 Sep 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/pediatrics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>/2019/09/02/goals-as-a-chief-resident/</guid>
       <description>TomorrowTomorrow is my first day as the chief pediatric resident at Memorial Sloan Kettering Cancer Center in NYC. I have lots of goals for the year, but knowing how chaotic life is in the hospital, I wanted to make sure I wrote them down before they are forgotten! I often find the workflow in hospitals is so busy that it is often to just hard enough to survive the day without building the foundation to try to have more good days.</description>
-    </item>
-    
-    <item>
-      <title>The first post of the new website</title>
-      <link>/2019/08/31/the-first-post/</link>
-      <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/08/31/the-first-post/</guid>
-      <description>This is my first post on my new website built with the R package blogdown, the help of many online help pages, and my lovely husband. I am using Github and Netlify as well. I don’t have the energy to write a post about how I built this, but here is the list of things that caused pain:
-in my config.toml file I had replaced the baseurl default of baseurl = &#34;</description>
     </item>
     
   </channel>
