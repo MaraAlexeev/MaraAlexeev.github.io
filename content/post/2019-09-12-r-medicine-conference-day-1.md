@@ -28,6 +28,7 @@ Attended a workshop by Alison Hill. Here are some of my notes to future self to 
 1. leaflet
 1. gitlab
 1. DataTables
+1. revealjs
 
 # Figure out how to...
 
