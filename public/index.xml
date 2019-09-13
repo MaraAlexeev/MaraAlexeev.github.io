@@ -6,10 +6,20 @@
     <description>Recent content on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>RStudio Cloud to Github to Website</title>
+      <link>/2019/09/13/rstudio-cloud-to-github-to-website/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/09/13/rstudio-cloud-to-github-to-website/</guid>
+      <description>It works!! But first it doesn’t Yesterday I took some notes from a R Markdown workshop at R/Medicine 2019 and wanted to post them to my website. I ran into troubles!
+I wanted to start making blogging from within RStudio Cloud easy. I use a Chromebook, and it isn’t easy to install R into my particalar Chromebook, though other Chromebooks have the capacity. I also am a huge RStudio Cloud user, so wanted to finally integrate my blogdown blog with my Rstudio Cloud and Github accounts.</description>
+    </item>
     
     <item>
       <title>R-Medicine Conference: Day 1</title>
