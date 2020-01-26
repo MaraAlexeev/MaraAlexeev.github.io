@@ -1,0 +1,12 @@
+---
+title: Healthcare specific R packages
+author: Mara Alexeev
+date: '2019-09-13'
+slug: healthcare-specific-r-packages
+categories: []
+tags: []
+---
+
+qicharts
+qcc
+comorbidity

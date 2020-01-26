@@ -4,16 +4,36 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-09-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2020/01/25/back-in-the-saddle/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/09/13/healthcare-specific-r-packages/</loc>
     <lastmod>2019-09-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/2019/09/13/rstudio-cloud-to-github-to-website/</loc>
+    <lastmod>2019-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/09/13/trying-out-new-things-in-r-markdown/</loc>
     <lastmod>2019-09-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -45,11 +65,6 @@
   <url>
     <loc>/2019/08/31/the-first-post/</loc>
     <lastmod>2019-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <lastmod>2019-08-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>

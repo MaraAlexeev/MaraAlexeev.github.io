@@ -1,6 +1,6 @@
 ---
-date: "2019-08-30"
-title: About
+title: "About"
+date: '2020-01-25'
 ---
 
 My name is Mara Alexeev. I currently live in New York City, but I grew up on a farm in central Iowa. In fourth grade I was in love with space and wanted to be a part time astronaut and part time farmer. While those dreams have not yet been realized, I have completed a combined pediatrics residency and masters of public health at Oakland Kaiser Permanente and at UC Berkeley in May 2016, respectively. 
@@ -12,8 +12,7 @@ I love learning human and computer languages. I’ve had a long love affair with
 Interested in connecting or collaborating? Send me a message on Twitter!
 
 <center>
-<img src="/./about_files/MaraAtTheTandy.jpg" alt="Mara at the Tandy" width="60%" height="60%"/>
-
+![Mara at the Tandy](/./images/MaraAtTheTandy.jpg){width=60% height=60%}
 
 "I can run this computer, Dad."
 
