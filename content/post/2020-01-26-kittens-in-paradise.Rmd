@@ -1,0 +1,50 @@
+---
+title: "Kittens in paradise"
+author: "Mara Alexeev"
+date: '2020-01-26'
+slug: kittens-in-paradise
+tags: []
+categories: []
+---
+
+#Fostering kittens
+
+<center>
+![Cranky kittens, Reason, Rebel, & Rhyme, after their first bath](/cloud/project/static/images/kittens_after_bath.jpg)
+
+<left>
+In May 2017 we fostered three kittens who were siblings. I tracked their daily weights out of curiosity and because I while I really enjoy fostering kittens, I would like some good rule of thumb for expected weight gain to help plan life around fostering (eg: Is this likely a 2 week or more of 4 week fostering gig?) The Maui Humane Society had specific weight cut offs for when kittens could be neutered (910 grams or 2 lbs), so for kittens that are socialized and healthy, this weight goal is the last hurdle before their neutering and being put up for adoption. 
+
+#Import and tidy data
+
+The only library I have loaded is tidyverse.
+
+```{r libraries, include=FALSE}
+library(tidyverse)
+```
+
+```{r import data}
+
+kitten_weight_gain <- read_csv("/cloud/project/content/post/kitten_weight_gain - Sheet1.csv")
+
+names(kitten_weight_gain)
+
+```
+```{r tidy data to make each row an observation}
+
+tidy_kittens <- pivot_longer(kitten_weight_gain, cols = 3:5, names_to = "kitten_name", values_to = "weight_in_grams")
+
+tidy_kittens %>% separate(col = 4, into = c("kitten_name", "sex"), sep = "_")
+```
+
+Ok now I have my data in a more tidy format. This is the first time I have used dpylr::pivot_longer. I first tried to use dpylr::spread but saw a little note that pivot_longer was the new kid in town. I thought it was great. Certainly was faster for me to use even though it was the first time reading through the documentation.
+
+#Weight gain, graphically
+
+I want to denote a few things in my graph: distinguish the two males from the female kitten, note that the first day's wieght was by a different scale. And I'd love to somehow squeeze a picture of the k
+
+#Next steps
+
+Questions I have now after the first collection of data: 
+Do males and females have different weight gain rates?
+What are the currently known determinants of weight gain in domestic kittens? Though these kittens were supposedly siblings, queens can have a single litter with multiple toms fathering kittens, so the kittens from a single litter might be more or less related.

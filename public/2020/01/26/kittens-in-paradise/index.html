@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.58.1" />
+
+
+<title>Kittens in paradise - A Hugo website</title>
+<meta property="og:title" content="Kittens in paradise - A Hugo website">
+
+
+  <link href='../../../../favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="../../../../about/">About</a></li>
+    
+    <li><a href="https://github.com/MaraAlexeev">GitHub</a></li>
+    
+    <li><a href="../../../../projects/">Projects</a></li>
+    
+    <li><a href="https://twitter.com/MaraAlexeev">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">Kittens in paradise</h1>
+
+    
+    <span class="article-date">2020-01-26</span>
+    
+
+    <div class="article-content">
+      
+
+
+<p>#Fostering kittens</p>
+<center>
+<div class="figure">
+<img src="../../../../cloud/project/static/images/kittens_after_bath.jpg" alt="Cranky kittens, Reason, Rebel, &amp; Rhyme, after their first bath" />
+<p class="caption">Cranky kittens, Reason, Rebel, &amp; Rhyme, after their first bath</p>
+</div>
+<p><left>
+In May 2017 we fostered three kittens who were siblings. I tracked their daily weights out of curiosity and because I while I really enjoy fostering kittens, I would like some good rule of thumb for expected weight gain to help plan life around fostering (eg: Is this likely a 2 week or more of 4 week fostering gig?) The Maui Humane Society had specific weight cut offs for when kittens could be neutered (910 grams or 2 lbs), so for kittens that are socialized and healthy, this weight goal is the last hurdle before their neutering and being put up for adoption.</p>
+<p>#Import and tidy data</p>
+<p>The only library I have loaded is tidyverse.</p>
+<pre class="r"><code>kitten_weight_gain &lt;- read_csv(&quot;/cloud/project/content/post/kitten_weight_gain - Sheet1.csv&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   Date = col_character(),
+##   `Day of Fostering` = col_double(),
+##   Rhyme_male = col_double(),
+##   Reason_male = col_double(),
+##   Rebel_female = col_double(),
+##   Scale = col_double()
+## )</code></pre>
+<pre class="r"><code>names(kitten_weight_gain)</code></pre>
+<pre><code>## [1] &quot;Date&quot;             &quot;Day of Fostering&quot; &quot;Rhyme_male&quot;      
+## [4] &quot;Reason_male&quot;      &quot;Rebel_female&quot;     &quot;Scale&quot;</code></pre>
+<pre class="r"><code>tidy_kittens &lt;- pivot_longer(kitten_weight_gain, cols = 3:5, names_to = &quot;kitten_name&quot;, values_to = &quot;weight_in_grams&quot;)
+
+tidy_kittens %&gt;% separate(col = 4, into = c(&quot;kitten_name&quot;, &quot;sex&quot;), sep = &quot;_&quot;)</code></pre>
+<pre><code>## # A tibble: 45 x 6
+##    Date     `Day of Fostering` Scale kitten_name sex    weight_in_grams
+##    &lt;chr&gt;                 &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;
+##  1 5/5/2017                  1     1 Rhyme       male               590
+##  2 5/5/2017                  1     1 Reason      male               680
+##  3 5/5/2017                  1     1 Rebel       female             635
+##  4 5/6/2017                  2     2 Rhyme       male               555
+##  5 5/6/2017                  2     2 Reason      male               625
+##  6 5/6/2017                  2     2 Rebel       female             550
+##  7 5/7/2017                  3     2 Rhyme       male               560
+##  8 5/7/2017                  3     2 Reason      male               680
+##  9 5/7/2017                  3     2 Rebel       female             591
+## 10 5/8/2017                  4     2 Rhyme       male               600
+## # … with 35 more rows</code></pre>
+<p>Ok now I have my data in a more tidy format. This is the first time I have used dpylr::pivot_longer. I first tried to use dpylr::spread but saw a little note that pivot_longer was the new kid in town. I thought it was great. Certainly was faster for me to use even though it was the first time reading through the documentation.</p>
+<p>#Weight gain, graphically</p>
+<p>I want to denote a few things in my graph: distinguish the two males from the female kitten, note that the first day’s wieght was by a different scale. And I’d love to somehow squeeze a picture of the k</p>
+<p>#Next steps</p>
+<p>Questions I have now after the first collection of data:
+Do males and females have different weight gain rates?
+What are the currently known determinants of weight gain in domestic kittens? Though these kittens were supposedly siblings, queens can have a single litter with multiple toms fathering kittens, so the kittens from a single litter might be more or less related.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+
