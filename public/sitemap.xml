@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>/2020/01/26/kittens-in-paradise/</loc>
-    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
@@ -75,6 +70,11 @@
   <url>
     <loc>/2019/08/31/the-first-post/</loc>
     <lastmod>2019-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/1/01/01/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
