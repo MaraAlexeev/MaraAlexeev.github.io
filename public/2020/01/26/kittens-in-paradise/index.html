@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.58.1" />
+<meta name="generator" content="Hugo 0.64.1" />
 
 
 <title>Kittens in paradise - A Hugo website</title>
 <meta property="og:title" content="Kittens in paradise - A Hugo website">
 
 
-  <link href='../../../../favicon.ico' rel='icon' type='image/x-icon'/>
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
 
 
 
@@ -27,8 +27,8 @@
 
 
 
-<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
-<link rel="stylesheet" href="../../../../css/main.css" media="all">
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
 
 
 
@@ -37,8 +37,8 @@
     <div class="wrapper">
       <header class="header">
         <nav class="nav">
-  <a href="../../../../" class="nav-logo">
-    <img src="../../../../images/logo.png"
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
          width="50"
          height="50"
          alt="Logo">
@@ -46,11 +46,11 @@
 
   <ul class="nav-links">
     
-    <li><a href="../../../../about/">About</a></li>
+    <li><a href="/about/">About</a></li>
     
     <li><a href="https://github.com/MaraAlexeev">GitHub</a></li>
     
-    <li><a href="../../../../projects/">Projects</a></li>
+    <li><a href="/projects/">Projects</a></li>
     
     <li><a href="https://twitter.com/MaraAlexeev">Twitter</a></li>
     
@@ -76,48 +76,17 @@
     <div class="article-content">
       
 
-<h1 id="fostering-kittens">Fostering kittens</h1>
 
-<p><img src="../../../../cloud/project/static/images/kittens_after_bath.jpg" alt="Cranky kittens, Reason, Rebel, &amp; Rhyme, after their first bath" /></p>
-
-<p>In May 2017 we fostered three kittens who were siblings. I tracked their daily weights out of curiosity and because I while I really enjoy fostering kittens, I would like some good rule of thumb for expected weight gain to help plan life around fostering (eg: Is this likely a 2 week or more of 4 week fostering gig?) The Maui Humane Society had specific weight cut offs for when kittens could be neutered (910 grams or 2 lbs), so for kittens that are socialized and healthy, this weight goal is the last hurdle before their neutering and being put up for adoption. Sadly, I don&rsquo;t know how old the kittens were when we started fostering them, but I was able to find the foster request email from the shelter, and the director estimated the duration of fostering would be 4-5 weeks. Pretty amazing then that it only took 2 weeks, but maybe she just didn&rsquo;t have the data to make good predictions on how long it takes kittens to gain weight.</p>
-
-<h2 id="import-and-tidy-data">Import and tidy data</h2>
-
-<p>The only libraries I have loaded are tidyverse and janitor. I tried to figure out if their was a code chuck option to show the code, but not show the evaluation of it, but didn&rsquo;t find it. I&rsquo;ll need to search through R Markdown. <strong>Update</strong> found it. Looks like I need to set results to false</p>
-
-<pre><code class="language-r">library(tidyverse)
-</code></pre>
-
-<pre><code>## ── Attaching packages ────── tidyverse 1.2.1 ──
-</code></pre>
-
-<pre><code>## ✔ ggplot2 3.2.1     ✔ purrr   0.3.2
-## ✔ tibble  2.1.3     ✔ dplyr   0.8.3
-## ✔ tidyr   1.0.0     ✔ stringr 1.4.0
-## ✔ readr   1.3.1     ✔ forcats 0.4.0
-</code></pre>
-
-<pre><code>## ── Conflicts ───────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-</code></pre>
-
-<pre><code class="language-r">library(janitor)
-</code></pre>
-
-<pre><code>## 
-## Attaching package: 'janitor'
-</code></pre>
-
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     chisq.test, fisher.test
-</code></pre>
-
-<pre><code class="language-r">kitten_weight_gain &lt;- read_csv(&quot;/cloud/project/content/post/kitten_weight_gain - Sheet1.csv&quot;)
-</code></pre>
-
+<p><img src="/post/2020-01-26-kittens-in-paradise_files/kittens_after_bath.jpg" style="width:100.0%;height:100.0%" /></p>
+<div id="fostering-kittens" class="section level1">
+<h1>Fostering kittens</h1>
+<p>In May 2017 we fostered three kittens who were siblings. I tracked their daily weights out of curiosity and because I while I really enjoy fostering kittens, I would like some good rule of thumb for expected weight gain to help plan life around fostering (eg: Is this likely a 2 week or more of 4 week fostering gig?) The Maui Humane Society had specific weight cut offs for when kittens could be neutered (910 grams or 2 lbs), so for kittens that are socialized and healthy, this weight goal is the last hurdle before their neutering and being put up for adoption. Sadly, I don’t know how old the kittens were when we started fostering them, but I was able to find the foster request email from the shelter, and the director estimated the duration of fostering would be 4-5 weeks. Pretty amazing then that it only took 2 weeks, but maybe she just didn’t have the data to make good predictions on how long it takes kittens to gain weight.</p>
+<div id="import-and-tidy-data" class="section level2">
+<h2>Import and tidy data</h2>
+<p>The only libraries I have loaded are tidyverse and janitor. I tried to figure out if their was a code chuck option to show the code, but not show the evaluation of it, but didn’t find it. I’ll need to search through R Markdown. <strong>Update</strong> found it. Looks like I need to set message to false.</p>
+<pre class="r"><code>library(tidyverse)
+library(janitor)</code></pre>
+<pre class="r"><code>kitten_weight_gain &lt;- read_csv(&quot;~/website/MaraAlexeev.github.io/static/data/KittenWeights/kitten_weight_gain - Sheet1.csv&quot;)</code></pre>
 <pre><code>## Parsed with column specification:
 ## cols(
 ##   Date = col_character(),
@@ -126,17 +95,11 @@
 ##   Reason_male = col_double(),
 ##   Rebel_female = col_double(),
 ##   Scale = col_double()
-## )
-</code></pre>
-
-<pre><code class="language-r">names(kitten_weight_gain)
-</code></pre>
-
-<pre><code>## [1] &quot;Date&quot;             &quot;Day of Fostering&quot; &quot;Rhyme_male&quot;      
-## [4] &quot;Reason_male&quot;      &quot;Rebel_female&quot;     &quot;Scale&quot;
-</code></pre>
-
-<pre><code class="language-r">kitten_weight_gain &lt;- clean_names(kitten_weight_gain)
+## )</code></pre>
+<pre class="r"><code>names(kitten_weight_gain)</code></pre>
+<pre><code>## [1] &quot;Date&quot;             &quot;Day of Fostering&quot; &quot;Rhyme_male&quot;       &quot;Reason_male&quot;     
+## [5] &quot;Rebel_female&quot;     &quot;Scale&quot;</code></pre>
+<pre class="r"><code>kitten_weight_gain &lt;- clean_names(kitten_weight_gain)
 
 tidy_kittens &lt;- pivot_longer(kitten_weight_gain, cols = 3:5, names_to = &quot;kitten_name&quot;, values_to = &quot;weight_in_grams&quot;) 
 
@@ -150,9 +113,7 @@ tidy_kittens$date &lt;- as.Date(tidy_kittens$date, format = &quot;%m/%d/%Y&quot;
 
 tidy_kittens$weight_in_grams &lt;- as.numeric(tidy_kittens$weight_in_grams)
 
-head(tidy_kittens)
-</code></pre>
-
+head(tidy_kittens)</code></pre>
 <pre><code>## # A tibble: 6 x 6
 ##   date       day_of_fostering scale kitten_name sex    weight_in_grams
 ##   &lt;date&gt;                &lt;dbl&gt; &lt;fct&gt; &lt;chr&gt;       &lt;fct&gt;            &lt;dbl&gt;
@@ -161,16 +122,13 @@ head(tidy_kittens)
 ## 3 2017-05-05                1 1     rebel       female             635
 ## 4 2017-05-06                2 2     rhyme       male               555
 ## 5 2017-05-06                2 2     reason      male               625
-## 6 2017-05-06                2 2     rebel       female             550
-</code></pre>
-
+## 6 2017-05-06                2 2     rebel       female             550</code></pre>
 <p>Ok now I have my data in a more tidy format. This is the first time I have used dpylr::pivot_longer. I first tried to use dpylr::spread but saw a little note that pivot_longer was the new kid in town. I thought it was great. Certainly was faster for me to use even though it was the first time reading through the documentation.</p>
-
-<h2 id="weight-gain-graphically">Weight gain, graphically</h2>
-
-<p>I want to denote a few things in my graph: distinguish the two males from the female kitten, note that the first day&rsquo;s wieght was by a different scale. And I&rsquo;d love to somehow squeeze a picture of the kitten into its key&ndash;but since I only have a few minutes before my toddler wakes up&ndash;basics first.</p>
-
-<pre><code class="language-r">graphic_kittens &lt;- ggplot(tidy_kittens, aes(x = date, y = weight_in_grams, color = kitten_name, shape = sex)) +
+</div>
+<div id="weight-gain-graphically" class="section level2">
+<h2>Weight gain, graphically</h2>
+<p>I want to denote a few things in my graph: distinguish the two males from the female kitten, note that the first day’s wieght was by a different scale. And I’d love to somehow squeeze a picture of the kitten into its key–but since I only have a few minutes before my toddler wakes up–basics first.</p>
+<pre class="r"><code>graphic_kittens &lt;- ggplot(tidy_kittens, aes(x = date, y = weight_in_grams, color = kitten_name, shape = sex)) +
   geom_smooth() +
   labs(title = &quot;Foster Kitten Weight Gain&quot;, subtitle = &quot;Journey to adequate weight for neutering and adoption&quot;) +
   xlab(&quot; &quot;) +
@@ -182,20 +140,18 @@ head(tidy_kittens)
   
 
 
-print(graphic_kittens)
-</code></pre>
-
-<pre><code>## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
-</code></pre>
-
-<p><img src="../../../../post/2020-01-26-kittens-in-paradise_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-
-<h2 id="next-steps">Next steps</h2>
-
+print(graphic_kittens)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/post/2020-01-26-kittens-in-paradise_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="next-steps" class="section level2">
+<h2>Next steps</h2>
 <p>Questions I have now after the first collection of data:
 Do males and females have different weight gain rates?
 Do any animal shelters moniter weight gain as an indicator of kitten well being like we have for infant/child growth curves as humans?
 What are the currently known determinants of weight gain in domestic kittens? Though these kittens were supposedly siblings, queens can have a single litter with multiple toms fathering kittens, so the kittens from a single litter might be more or less related.</p>
+</div>
+</div>
 
     </div>
   </article>
@@ -208,10 +164,10 @@ What are the currently known determinants of weight gain in domestic kittens? Th
       <footer class="footer">
         <ul class="footer-links">
           <li>
-            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
           </li>
           <li>
-            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
           </li>
         </ul>
       </footer>
@@ -232,7 +188,7 @@ What are the currently known determinants of weight gain in domestic kittens? Th
 
 
     
-<script src="../../../../js/math-code.js"></script>
+<script src="/js/math-code.js"></script>
 <script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
