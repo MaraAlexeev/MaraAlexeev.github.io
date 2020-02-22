@@ -1,0 +1,36 @@
+---
+title: RStudio Cloud to Github to Website
+author: Mara Alexeev
+date: '2019-09-13'
+slug: rstudio-cloud-to-github-to-website
+categories: []
+tags: []
+---
+
+# It works!! But first it doesn't
+
+Yesterday I took some notes from a R Markdown workshop at R/Medicine 2019 and wanted to post them to my website. I ran into troubles!
+
+I wanted to start making blogging from within RStudio Cloud easy. I use a Chromebook, and it isn't easy to install R into my particalar Chromebook, though other Chromebooks have the capacity. I also am a huge RStudio Cloud user, so wanted to finally integrate my blogdown blog with my Rstudio Cloud and Github accounts.
+
+## Easy: cloning to RStudio Cloud
+
+It was very easy to get my repository cloned into a RStudio Cloud Project.
+
+## Easy: Writing a new post
+
+After installing blogdown in my website project, I was able to use the RStudio Addin's of new post.
+
+## Not Easy: Pushing to Github
+
+I was able to commit and push, but nothing seemed to be happening. I quit trying, and gave up for the night and then retried in the morning and it worked. I am not sure what I did differently.
+
+I used this [page](https://bren.zendesk.com/hc/en-us/articles/360015826731-How-to-connect-RStudio-Cloud-with-Github) to set things up. I didn't realize what the difference between the console and terminal until this. I love how at roughly 5 months of really, truly using R, I am still running into these fundamental seeming issues, but it hasn't particularlly slowed me down! (That I know of!) I think that supports my belief that the best way to learn R, is to USE R!
+
+## Confusing: .md versus .Rmd
+
+For my new post, nothing was appearing on my website though I saw it on my github. I noticed that I had accidentally saved my file as .md instead of .Rmd. I remember this being an issue two weeks ago (but memories are bad), so I just resaved it as an .Rmd. Commited and Pushed, saw changes, but still no know update to my website.
+
+## Easy! Serve the website
+
+I tried to look at my website locally to see if I could see what I expected there to localize where the problem was. I realized after I served the website and saw it looked correct locally, that a lot of files wehre in my git panel and realized that I needed to do that before I would see my post. So I commited those changes to Github and then my website worked!! Very exciting. 

@@ -4,7 +4,47 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-09-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2020/01/26/kittens-in-paradise/</loc>
+    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2020/01/25/back-in-the-saddle/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/09/13/healthcare-specific-r-packages/</loc>
+    <lastmod>2019-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/09/13/rstudio-cloud-to-github-to-website/</loc>
+    <lastmod>2019-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/09/13/trying-out-new-things-in-r-markdown/</loc>
+    <lastmod>2019-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/09/12/r-medicine-conference-day-1/</loc>
+    <lastmod>2019-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -14,11 +54,6 @@
   
   <url>
     <loc>/tags/pediatrics/</loc>
-    <lastmod>2019-09-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
     <lastmod>2019-09-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,8 +73,8 @@
   </url>
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2019-08-30T00:00:00+00:00</lastmod>
+    <loc>/1/01/01/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
