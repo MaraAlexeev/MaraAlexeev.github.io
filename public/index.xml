@@ -6,10 +6,19 @@
     <description>Recent content on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pandemic projects</title>
+      <link>/2020/04/04/pandemic-projects/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/04/04/pandemic-projects/</guid>
+      <description>COVID-19 has changed my life dramatically in the past 4 weeks. I’m still working, but my husband and son are out of state with family. When it became obvious to me that COVID-19 was descending on the city, I sent them away because there was no way for me to isolate myself in the apartment from them. Being away from them is difficult, so I am beyond thankful I live in a time of video chat and Google photos.</description>
+    </item>
     
     <item>
       <title>Kittens in paradise</title>

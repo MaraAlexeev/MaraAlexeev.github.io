@@ -1,0 +1,43 @@
+---
+title: Pandemic projects
+author: ''
+date: '2020-04-04'
+slug: pandemic-projects
+categories: []
+tags: []
+---
+
+COVID-19 has changed my life dramatically in the past 4 weeks. I'm still working, but my husband and son are out of state with family. When it became obvious to me that COVID-19 was descending on the city, I sent them away because there was no way for me to isolate myself in the apartment from them. Being away from them is difficult, so I am beyond thankful I live in a time of video chat and Google photos. I imagine this is true at most stages of children's lives, but seeing my son do new things from a distance is both wonderful and deeply saddening. I feel he recognizes me when we video chat, I wonder how he will react when we are able to see each other again. To add to the confusion, I will look very different when he sees me next as I am pregnant and will be quite a different shape from when we were last together even if we were reunited tomorrow. 
+
+To help pass the time with as many distractions as possible, excluding social media, which I have found to be utterly energy sapping, I am setting a few pandemic goals to focus my attention on. Of course, I feel it is completely acceptable to come home from the hospital and sit in my pjs doing basically nothing until bedtime if that's what I have the motivation to do, but for days that are less exhausting, I have a few ideas of how to make the best of this bizarre time. 
+
+# R projects
+
+I am hoping to update my blog more frequently with both new material and posting older material that was originally on my old website.
+
+I want to finish "R for Data Science"; I have loved the book so far, and I hope to make blog posts as I work through the chapters I have left. 
+
+Finally, I am working an R for Data Science collection of online courses that I hope to finish. I am about 2/3 of the way done and have made good progress in the past 2 weeks. My next course is on writing functions, which is something I am very excited about. 
+
+# Home projects
+
+With my son gone, I have time to go through our stuff and trim down. It's amazing what items, useful and otherwise, one acquires when one has children. 
+
+We plan to move to Boston this summer, so finding housing and planning a move during a pandemic is a bit of task. How economic changes will affect prices and housing availability is yet to be seen. The Boston/Brookline/Cambridge housing scene is not as bad has NYC, but now planning for a future family of four with two small children and trying to avoid car ownership it has become bigger challenge even than when were looking for housing in Manhattan to stay close to our jobs. 
+
+# Fitness
+
+We luckily bought an exercise bike in January because I was finding it so difficult to go to the gym after work and after baby went to bed. I have had okay success using it, but I want to make it and stretching part of my daily life. During my first pregnancy, I was in the best shape of my life thanks to the gym across the street from our apartment and using a personal trainer. Hiring a personal trainer felt like an embarrassing luxury, but honestly, I think it was the best think I have ever done for my health. It is less practically after my son and starting working, but I am hopeful about finding some online/app resources that can capture some of that support to make my in home, pandemic workouts (and beyond) even more successful.
+
+# Reading
+
+I love to read, and I tend to read books in spurts. I find an author or series I enjoy and devour it in a few days/weeks. Then I have the predictable post-amazing series depression where all I want is another book in that series. I have to greive a bit before I can move on to the next series. To try to overcome this predictable gap, I have made a list of books I want to read: 
+
+1) Anna Karenina (finish)
+2) Cities for People (finish)
+3) Brain on Fire
+4) Barbarian Days: A surfing Life
+
+# R/Medicine
+
+I am part of the planning committee for the R in Medicine conference. It has been difficult to attend meetings recently because of clinical duties at those times, but I hope to be able to work on it outside just those times to contribute. Currently, I am working on engagement, recruitment, and diversity/inclusion ideas. 
