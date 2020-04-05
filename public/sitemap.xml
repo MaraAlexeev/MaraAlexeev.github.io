@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/2020/04/04/pandemic-projects/</loc>
-    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+    <loc>/2020/04/05/immersive-language-learning/</loc>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/russian/</loc>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2020/04/04/pandemic-projects/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,11 +78,6 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-09-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/projects/</loc>
     <lastmod>2019-08-31T00:00:00+00:00</lastmod>
   </url>
@@ -79,6 +89,10 @@
   
   <url>
     <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/cv/</loc>
   </url>
   
 </urlset>

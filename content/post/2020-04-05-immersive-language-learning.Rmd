@@ -1,0 +1,134 @@
+---
+title: Immersive Language Learning
+author: Mara Alexeev
+date: '2020-04-05'
+slug: immersive-language-learning
+categories: []
+tags:
+  - Russian
+---
+I wrote the following in the fall of 2016 after my summer experience at Middlebury College for an 8 week immersive Russian course. I originally shared it with my instructors and posted it on my old blog. I have updated the format for Rmarkdown.
+
+# Reflections on my Middlebury experience
+
+My summer at Middlebury was amazing. I learned an enormous amount and met wonderful people, and importantly I am still progressing in Russian at home--even though I wish I could still be in that magical world in Vermont. Below are some of my thoughts on making the most out of Middlebury.
+
+## Read materials several times. 
+It is not possible to see material for the first time and master it in a single read through.
+
+For example, I read the entire week’s grammar lessons through once during the weekend prior. Not in an attempt to master the material, but only to gain an overview of the material. The day of or evening prior to the grammar lesson, I would read that particular lesson through again. Then after class I would review the parts of the lesson I found challenging before doing the homework. After completing the homework and checking my answers, I would review parts that I made mistakes in. 
+
+In literature and current events class, I initially tortured myself by looking up every word that I didn’t know. This is very painful and unsustainable. Then I started focusing on understanding the gist of paragraphs instead of understanding every word in a sentence. As you read, you can gain context and hints that give you better context or might help you figure out words that you know, but just didn’t recognize at first or have a root that you can guess the meaning of. Then look up keywords to help you understand the section as a whole. 
+
+## Cramming is unsustainable. 
+
+If you read a new grammar lesson for the first time on Thursday and take a test on it on Friday, having never practiced the material in speech or in writing, you might squeak by on the test, but you will not retain that material for the next week. Subsequent grammar lessons build on each other, so you can’t just cross your fingers and hope that you won’t see that topic again.
+
+## Review frequently. 
+Sometime in the Friday afternoon to Sunday evening timeframe I would do a comprehensive read-through of all the material covered in grammar class up to that point. I often did this over several cups of coffee and a long breakfast on Saturday morning. It was a very low stress way to strengthen my old skills and prepare for the coming week’s lessons. For vocabulary, I would set aside time nearly every day to review a few words from prior weeks and try to use them that day. 
+
+I cannot stress how important it is to review material. It is not possible to absorb all the details in the material the first or second or third time you see material. In my last week of the program, I learned new things from the very first lesson in the grammar textbook because I could understand the point in a different and more complete context than I could have any time before that.  
+
+## Use your grammar and vocabulary as you learn it. 
+Grammar is not a boring thing you have to suffer through before you get to the important stuff. It is the scaffold you hang all the other material on. 
+
+Make up occasions to use the grammar and new words you are learning. For example, when you start working on numbers, use numbers in all your conversations. When you start learning adjective endings in oblique cases, dress up all your nouns in every case with an adjective. Working on genitive plural or instrumental plural? Use all those irregular nouns in your conversation, make up stories about armchairs, brothers, stools, clouds, people, horses, children, and daughters as you walk around campus.  
+
+## Find the study methods that work for you. 
+For learning new vocabulary, I used an online flashcard system and a notebook system that I developed during my time at Middlebury. I know there are lots of materials available to use online, but part of my learning is creating my own materials. 
+
+There is absolutely no single, best method to learn a language. But all methods require time and effort. If you don’t see results from your method, experiment with alternatives, ask friends and classmates. Ask your teachers for their observations of your ‘mistakes’ or difficulties. 
+
+## Understand you can’t possibly understand everything the first time you see it. 
+
+Accept it and move on. I watched students bang their heads against topics like verbs of motion and reflexive verbs. You don’t need to understand everything at once. Learning a language is not a linear path that drops you off at a town called Fluency! It is a messy, confusing, and wonderful process that will bewilder you. The process is meandering journey; you will come back to these tough topics again and again. Grab what you can and know you will be back to learn more later. 
+
+## You don’t have to speak perfectly to speak Russian. 
+Over the weeks and years you will refine your language skills. Remember you are a baby in this language. We don’t get upset at children as they start speaking in their baby talk, we praise them and support them. So don’t beat yourself up or worry what people might think at your speech--though this will not be an issue at Middlebury! 
+
+People often claim that children learn languages better because they have some special abilities, which adults have lost. From my anecdotal experience, I don’t believe this. 
+
+I think that children have the following advantages: learning the language is their full time job and they don’t have any hangups on how they sound. These are powerful ideas that you should adopt as much as possible. Make learning Russian part of your everyday life. Every day.
+
+On the other hand, adult learners have some advantages. A child might take years to learn to correctly use the different Russian “to put, to set, to stand” verbs, but a committed Russian adult student can master these in a week of practice. Children might have the luxury of time, but in my observation adults can learn the material at an accelerated rate. 
+
+## Learning a language is not a straightforward process. 
+Get comfortable with ambiguity and uncertainty. Your teachers may not be able to explain why things are they way they are. That doesn’t mean there isn’t a reason. Don’t waste too much time wondering why, just run with it, and stay curious because an explanation might come along later. And when it does, it is like a small nirvana. Enjoy it!
+
+When I started learning Russian, I couldn’t wrap my mind around constant mutation. I wasted so much time focusing on a few verbs, that I didn’t let myself just get familiar with the language. Sometimes you just need to immerse yourself and nurture an intuition. Now I can often correctly predict consonant mutations (in writing, my speak is still halting at times), because I have combined the intuition of seeing hundreds of verb conjugations with the foundational knowledge about consonant mutation. Theoretical understanding of the process wasn’t sufficient for me, I had to wrestle with those verbs and understand their rhythm. 
+
+## Don’t force English (or your native language) constructs on Russian. 
+For example, in Russian, there are many verbs that have the ending -ся or require a form of the pronoun себя. You just have to learn these, you can’t expect a rule that will guide you 100% of the time. Russian doesn’t care what English is doing. Uncouple them in your mind. 
+
+## Base your motivation on a solid foundation. 
+If you are focused primarily on grades, I can’t recommend Middlebury for you for several reasons. Learning a new language is difficult, and I can’t imagine that if your main motivation is your GPA you will have the right mindset to make the most of Middlebury. 
+
+I am learning Russian because I want to be closer to family members who speak only Russian, and I want to raise my children to speak the language of their father and grandparents. I want to understand the news in the language of one of the world’s major geopolitical players. I want to read Pushkin in his own words.
+
+Find a solid reason, because you will have days when you think it is too difficult, that it’s impossible, that you feel you aren’t making progress, and that it is probably just better to quit and move on with life. Anchoring yourself to meaningful purpose will help you weather those storms. 
+
+## Dump pride. 
+On the day after we received our initial levels for the program at Middlebury, I overheard a student say he was going to work very hard because he didn’t want to get moved down a level. This is an unhelpful mindset. Work hard, yes, but not because you think there is some special status attached to being in a certain level. The teachers at Middlebury know what they are doing. They will put you where you need to be. If you need to be switched to a different level, do not fret! If you don’t understand something, ask. Office hours are a great place to ask questions and have the time to extensively discuss them. But if you wait until the night before the test expect a line because so did everyone else!
+
+## Commit to the program. 
+Your friends and your family will understand that you can’t talk to them. You are at Middlebury to learn a language. So do that. 
+
+I promise you, it is such a rare occasion in life that you can exclusively focus on one topic for 8 weeks. Take advantage of it. 
+
+Arrange your life such that your summer is dedicated to you. Of course there are some exceptions that come up such as job interviews, but minimize them. Do not let other people or obligations pull you away from the language pledge. 
+
+## Aim to think in the target language full time. 
+Take what I call the Language Pledge 2.0. Instead of not speaking, writing, or reading in the non target language, take it a step further and commit to thinking in the target language full time. 
+
+I didn’t embrace this until late in the program. I thought I was doing my part by speaking only in Russian. But my brain was still trying to do business in English. 
+
+This is the hardest part of learning the language for me. In English I have an expansive vocabulary. I know thousands and thousands of words, idioms, cultural associations, word connotations, and can recognize thousands more. Being a bookworm and a physician, I am well versed in word roots, and I can often understand words I have never seen before in English. 
+
+I do not have this ability in Russian. Forcing myself to think in my infantile Russian is like locking an important part of myself away. But this is the glory of Middlebury and the language pledge, it is created to sustain you as you work through those limitations.
+
+And don’t think that because you are operating solely in Russian, that you are cut off from the world. There are plenty of Russian language news sites; read them. Listen to Russian music. Watch Russian movies. Put the Russian subtitles on for both music and movies for an extra bonus. On my final grammar test, I was trying to remember which case a verb governed, and I was struggling, but then I remembered the lyrics to a song which used that verb, and I had my answer!
+
+## Use what you have. 
+Say what you can, not what you want. Related to the above mentioned issue, I wanted to say things I didn’t have the vocabulary or sophistication to discuss. Do not waste time like I did on this. Say what you can with the words you do have. Every time you learn a new word in class, try to incorporate those words into your daily speech. When you do homework, use the words from your recent course work and covered themes, don’t spend too much time looking up unfamiliar words in the dictionary.
+
+Severely restrict your use of the phrase “Я не знаю, как скажет по-русски…” It’s exhausting for a listener when a person uses this every sentence. Use the words you know! If you can’t get to your point directly, talk yourself towards it. It might not be exactly what you want, but it is great practice stretching yourself and using your extended vocabulary to communicate. Using this lazy phrase is generally very unhelpful and often a conversation killer. Use all the other words you know!! Don’t focus on the one you don’t. 
+
+# Talk. 
+Honestly, talk as much as you can to whomever will listen. Listen to them, ask questions, tell jokes, read song lyrics. You can learn a lot about a language from a book, but you cannot learn to speak unless you speak. 
+
+I tend to be perfectionist, and this held me back when I was at Middlebury. I had to give up the desire for perfect grammar and the exact words I wanted. You want to be speaking so fast you don’t have time to think. 
+
+There is a difference between understanding and knowing. Understanding to me means I can hear a word or read a word and think about it and identify it. Knowing means I could be working in a busy emergency room at 2 AM, and someone starts speaking to me in Russian, and without thinking I know what they are saying. 
+
+Speaking only in Russian all day for 8 weeks is an amazing way to push your Russian skills into this knowing category. 
+
+## Practice what you learn in phonetics every day. 
+You won’t be able to incorporate everything at once, but I made specific phonetic goals, and I recommend the same for others. For example, I knew coming into the program that I couldn’t easily distinguish or reliably produce a palatalized “Л”, so that was a major goal of mine. But it wasn’t just a goal I thought about once in while. I practiced my phonetics every single day for a minimum of 10 minutes per day. You will not believe the progress you can make on phonetics with a few minutes of daily practice over the long term. 
+
+In my experience phonetics is not heavily stressed in language classes at other schools, but for Russian it is very important. As a native English speaker growing up in the USA, I was and am exposed to lots of accents in English from around the world and can understand people well despite very heavy accents. However, Russian speakers are generally not this way. Russian ears have a far narrower tolerance for accents or misplaced stress in words. You can know 10,000 words but won’t be able to order bread if you insist on saying хлеб with a ‘б’ sound at the end. 
+
+## Celebrate your new words. 
+I am currently only capable of increasing my active vocabulary by a few words per day. At first, I was discouraged that I was making such “slow” progress, but you have to consider the long game. Even at just 5 words per day for a year you can add nearly 2000 words to your active vocabulary. 
+
+## Don’t just learn naked words. 
+For nouns with no obvious grammatical gender (like ночь or лошадь), learn them with an adjective to remember the gender. I think for the first 6 weeks of the program, I was using вещь as if it were a masculine noun. Then I finally said the phrase “Это хорошая вещь” enough times, that I don’t think about what the gender of noun is, I simply know it. When you learn whole new phrases you get bonus grammar and syntax in addition to new vocabulary. 
+
+Learn words and invite their relatives. For example when you are learning the verbs давать/дать you can learn 20 other verbs easily by learning different prefixed forms of that verb pair, and then those prefixes tend to have similar meanings throughout the language, so next time you run into the prefix in a new environment, you will probably be able to make a good guess as to the meaning. 
+
+## Learn to type using a Russian keyboard. 
+This makes homework easier because you can easily revise papers, and your teachers will appreciate the easy-to-read format too! Learning to type is not optional. If you want to speak and live in a language, you need to be able to send emails, chat online, use online resources, fill out forms. All of which require you to know how to type.
+
+I learned to use the standard Russian keyboard (not the phonetic one) while working on Duolingo on my computer the year prior to attending Middlebury. I did not use stickers on my keyboard to learn the location of the letters, and I recommend that you do the same. Few computers in the world will have the stickers, so it is best to make yourself independent of them. 
+
+## Sleep, eat healthily, and exercise. 
+Find a routine that takes care of your body. As a physician I counsel families and children to have fairly stable sleep routines because sleep is important for both learning and general well being. And I would recommend the same to friends and peers in a program like Middlebury. Classes start the same time everyday, so figure out a healthy routine that you can manage and stick to it. 
+
+A schedule that ends up with you cramming all night Thursday and only sleeping 2 hours before the tests is not a healthy schedule.
+
+Exercise regularly. A daily 30 minute stroll around campus will do wonders for you mood and health. 
+
+## Understand that learning a language takes a long time.
+Learning Russian takes years. Full stop. 
+
+But it is possible. If you need reminders of your progress, record yourself talking at regular frequencies (I did this every week while I was at Middlebury.) And you can look back and listen to your progress. You will be amazed.  
+
