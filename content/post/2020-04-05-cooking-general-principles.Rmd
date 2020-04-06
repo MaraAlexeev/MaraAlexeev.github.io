@@ -1,0 +1,109 @@
+---
+title: 'Cooking: General Principles'
+author: Mara Alexeev
+date: '2020-04-05'
+slug: cooking-general-principles
+categories: []
+tags:
+  - cooking
+---
+# General Principles
+
+Our home's cooking style has several major sources of inspiration and guidance. Two are books: How to Cook Everything by Mark Bittman and The Professional Chief by the Culinary Institute of America. These books were the first serious introductions we had to cooking. We also find a wealth of inspiration from J. Kenji López-Alt at Serious Eats with special appreciation for his devotion to experimentation and crisp documentation. My favorite cookbook is Kachka by Bonnie Frumkin Morales
+
+## Safety
+The kitchen probably has some of the most dangerous elements of the home: flame and high heats, knives and sharp tools, sources of harmful bacterial or toxin exposure, steam and hot liquids. I have burned myself and cut myself in my own kitchen and, along with a group of friends from medical school, been the sad victim of food poisoning from a restaurant. 
+My number one goal in a kitchen is safety. We have an expectation in our kitchen that there should NEVER be any injuries. This is an ongoing process that has produced some robust systems that keep us safe, but our safety protocols are constantly being revised and expanded. 
+
+## Science
+While there are certainly variables that are difficult to replicate in a home--like the wild yeast that ferment Lambics--many foods can be done well or excellently at home. Despite what people claim.
+
+One of my biggest frustrations early on in cooking was failure of replication. Sometimes I was to blame for poor execution, but I soon realized that many recipes had serious errors. 
+
+Some of my favorite tools to create great food are so simple and affordable, but I only rarely see them in other home kitchens: a kitchen scale, a food thermometer, and well-kept recipe documentation.
+
+## Sharing 
+Hosting friends and family for a meal is a huge source of joy for me. I love to record what I have done, so that I can do better in the future and share my experiences with others to save them from making the same mistakes as I have. 
+I also write and document my kitchen adventures to create a family recipe book that is both practical in application and personal--capturing family events and moments together cooking and eating. 
+
+# Our House Menu 
+Below is our house menu. I plan to make an R package with our house recipes as a way to learn about how to create a package. I don't know anyting about how to create a package, but I hope to write a post about what I would like my package to do soon. Then as I work on learning more R and about package creation, I can update my post with desired features or think about how I should make the package. Obviously, the most important step is coming up with an awesome name: cookR, Recipe, cookbookR, eatR...
+
+☆ denotes a house special  
+
+Dishes with 🅅egan or ⓥegetarian denote dishes that are either already in that style or amenable to it
+
+## Appetizers 
+☆ ⓥ Dates stuffed with goat cheese and thyme, wrapped in bacon
+
+☆ ⓥ Avocado soup topped with crab and shrimp
+
+☆ ⓥ Salat Olivier, personal recipe -- Russian New Year’s salad
+
+Holodets -- a Russian/Ukrainian aspic
+
+Seledka pod shuboy -- Russian “herring under a fur coat”
+
+🅅 Butternut squash soup, topped with apples and crème fraîche
+
+🅅 Gazpacho
+
+Cranberry pecan chicken salad
+
+🅅 Salad with secret dressing
+
+Seared mackerel
+
+## Mains
+☆ 🅅 Ethiopian: injera, special kitfo, gomen, lentil stew
+
+☆ ⓥ Eggs benedict with smoked salmon and kale
+
+☆ ⓥ Buckwheat blini (crêpes) topped with salmon roe and crème fraîche
+
+☆ Poke -- Hawaiian “fish salad”
+
+☆ Beef tongue (lengua) tacos
+
+☆ Three-pork soup
+
+Dijon sirloin steak
+
+ⓥ “Paella”
+
+ⓥ Ratatouille
+
+Rack of lamb alongside silky smooth sweet potato
+
+48- or 72-hour short ribs
+
+ⓥ Emma’s “#3 pizza” -- sweet potato, caramelized onions, and goat cheese
+
+🅅 Açaí bowls with seasonal fruit
+
+## Desserts
+☆ 🅅 Caramelized peaches topped with yogurt
+
+☆ ⓥ Baked brie with jam
+
+ⓥ Semolina kasha with jam
+
+ⓥ Zucchini bread
+
+ⓥ Rhubarb custard pie
+
+## Drinks
+☆ 🅅 New Orleans iced coffee
+
+🅅 Grandma Donna's Fruit Punch
+
+☆ ⓥ Eggnog
+
+☆ 🅅 Spicy margarita
+
+🅅 Tom Collins
+
+🅅 Bourbon whiskey sour
+
+🅅 Kvass (requires several day notice for preparation)
+
