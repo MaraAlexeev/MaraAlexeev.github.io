@@ -1,0 +1,186 @@
+---
+title: Seatbelt Analysis
+author: 'Mara Alexeev'
+date: '2020-04-05'
+slug: seatbelt-analysis
+categories: []
+tags:
+  - R
+---
+The following is from year ago exactly: 2020-04-05. I am digging up old work and putting it on my new website. This was some of my very first independent work. 
+
+# Do all Germans wear their seatbelts?
+
+Inspired by this Tweet:
+https://twitter.com/hspter/status/1134098154167496704
+
+I laughed, but I did not think that this was possible. I imagined it was just playing into my acknowledged stereotype that Germany and Switzerland are impressively rule following and have a special relationship with their vehicles. 
+
+Did a quick Google search: rates of seat belt use Germany.
+
+Found this: https://www.who.int/violence_injury_prevention/road_safety_status/2013/country_profiles/germany.pdf?ua=1
+
+So a quick scan of the datasheet says that 98% of people in the front seat use seat belts. Seems pretty great, but then I wanted to know how it all compares. 
+
+So I decided to do a #чистый_четвер! (That's a clean Thursday in Russian as a play off of #TidyTuesday)
+
+My libraries:
+
+```{r}
+library(tidyverse)
+library(ggrepel)
+library(jsonlite)
+```
+
+
+Grab the JSON from the WHO site:
+(My first time getting a JSON independently!!!!)
+
+Notes: 
+
+fromJSON(txt, simplifyVector = TRUE,
+simplifyDataFrame = simplifyVector, simplifyMatrix = simplifyVector,
+flatten = FALSE, ...)
+
+```{r}
+seatbelt_who <- fromJSON("https://apps.who.int/gho/athena/data/GHO/RS_212.json?filter=COUNTRY:*;SEATTYPE:*")
+```
+
+Take a peak to make sure I imported correctly. (Note I set this following code chuck to eval = FALSE because the output was pages and pages long.)
+
+```{r, eval = FALSE}
+str(seatbelt_who)
+```
+Goodness that looks crazy. Seems like there are nested datasets. I'll try the the simplifed Json to see if I can get started faster. 
+
+```{r}
+simple_sb <- fromJSON("https://apps.who.int/gho/athena/data/GHO/RS_212.json?profile=simple&filter=COUNTRY:*;SEATTYPE:*")
+```
+
+Check that out.
+```{r}
+str(simple_sb)
+```
+
+AHHH! I just want to do some stuff. 
+
+```{r}
+str(simple_sb$fact)
+```
+Omg that worked.
+
+```{r}
+sb_facts <- simple_sb$fact
+str(sb_facts)
+```
+
+Hyperventilating from excitment!!!
+
+```{r}
+names(sb_facts)
+```
+Very confused because when I look at the dataframe it seems to have many columns but only these list and then the data are described as having 3 variables. I think I am missing something about how the data are organized. Gonna try to clean some of it up with janitor.
+
+```{r}
+library(janitor)
+clean_names(sb_facts)
+names(sb_facts)
+```
+
+Still not what I expected. I did see something about simplify and flatten. Maybe that means something I want. 
+```{r}
+seatbelt_flatten <- fromJSON("https://apps.who.int/gho/athena/data/GHO/RS_212.json?profile=simple&filter=COUNTRY:*;SEATTYPE:*", flatten = TRUE)
+  
+str(seatbelt_flatten$fact)
+```
+
+Ok still a bit confused but seemingly having 2 diminesion but better. Seems like I have 8 variables now in $fact part. Going to rename to make easier and attempt to clean. 
+
+```{r}
+seatbelt_1 <- seatbelt_flatten$fact
+
+str(seatbelt_1)
+seatbelt_1 <- clean_names(seatbelt_1)
+
+```
+
+```{r}
+colnames(seatbelt_1)
+```
+
+Great. Names look better. But everything looks like a chr. I am going to coerece some cols. 
+...
+I fell down a rabbit hole. I read some stuff on stackoverflow
+https://stackoverflow.com/questions/22772279/converting-multiple-columns-from-character-to-numeric-format-in-r
+
+
+But also as totally unrelated to this analysis commentary. I like stackoverflow but I get anxious reading the comments sometime. The comments can be sooo snippy: https://stackoverflow.com/a/53857448/11484875 . Doesn't seem very welcoming and I don't have the confidence to post there, yet. 
+I am so thankful for everyone that does though! 
+
+
+Ok back to analysis
+
+This looks promising: 
+df %>% mutate_at('x1',as.numeric) %>% str()
+
+Also lots about lapply
+
+  data[] <- lapply(data, function(x) type.convert(as.character(x), as.is = TRUE)) #change all vars to their best fitting data type
+```{r}
+lapply(seatbelt_1, class)
+```
+
+```{r}
+  seatbelt_convert_1 <- lapply(seatbelt_1, function(x) type.convert(as.character(x), as.is = TRUE)) #change all vars to their best fitting data type
+str(seatbelt_convert_1)
+```
+
+Nope
+
+Try again
+# by specific columns:
+df %>% 
+  mutate_at(vars(x, y, z), ~as.numeric(as.character(.))) 
+  
+```{r}
+seatbelt_convert_2 <- seatbelt_1 %>% mutate_at(vars(1,5), ~as.numeric(as.character(.))) %>% mutate_at(vars(3, 6, 7, 8), ~as.factor(as.character(.))) 
+str(seatbelt_convert_2)
+```
+  
+Looks like that worked!!!
+
+Okay these seems great. I don't quite understand some of the piping behavior, but moving forward!!!
+
+Time to plot!!!
+Lets look at counties in europe. still a lot, so just front seat rates and then exclude ones with NA
+
+```{r}
+europe_seatbelt <-  filter(seatbelt_convert_2, dim_region=="Europe")
+
+europe_seatbelt_front <- filter(europe_seatbelt, dim_seattype =="Front seat")
+
+europe_seatbelt_final <- filter(europe_seatbelt_front,  !is.na(value))
+```
+
+```{r}
+europe_graph <- ggplot(europe_seatbelt_final) + aes(x = reorder(dim_country, value)) + aes(y = value) + geom_point()
+
+europe_graph
+```
+I am so pleased!! I did not know about reorder until now!!!! I knew it must exist but hadn't used it!
+
+```{r}
+titles <- labs(title = "Who has their seatbelt on in Europe? (2013)", subtitle = "Exploring seatbelt use after falling into a Tweethole by @MaraAlexeev", x = "", y = "Front Seatbelt Use % -- Red line is 95%", caption = "Data from WHO")
+
+europe_graph + titles
+```
+
+Ok to fix the country names and add color 
+```{r}
+
+
+  
+europe_graph + titles + coord_flip() + scale_color_gradient() +
+ theme_classic() + geom_hline(yintercept=95, linetype="dashed", color = "red") + scale_y_continuous(position = "right") + scale_x_discrete(position = "top") 
+```
+Omg. The plotted data look like a buckled seat belt!!!!!!!!
