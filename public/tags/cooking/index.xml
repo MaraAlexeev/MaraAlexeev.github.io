@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cooking on A Hugo website</title>
+    <link>/tags/cooking/</link>
+    <description>Recent content in cooking on A Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/cooking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cooking: General Principles</title>
+      <link>/2020/04/05/cooking-general-principles/</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/04/05/cooking-general-principles/</guid>
+      <description>General PrinciplesOur home’s cooking style has several major sources of inspiration and guidance. Two are books: How to Cook Everything by Mark Bittman and The Professional Chief by the Culinary Institute of America. These books were the first serious introductions we had to cooking. We also find a wealth of inspiration from J. Kenji López-Alt at Serious Eats with special appreciation for his devotion to experimentation and crisp documentation.</description>
+    </item>
+    
+  </channel>
+</rss>
