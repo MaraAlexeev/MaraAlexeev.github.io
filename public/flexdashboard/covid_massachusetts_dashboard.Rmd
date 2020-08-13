@@ -1,0 +1,43 @@
+---
+title: Massachusetts COVID-19 Dashboard Example
+author: ''
+date: '2020-08-13'
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+---
+```{r, libraries}
+library(flexdashboard)
+library(devtools)
+
+```
+
+```{r, data}
+
+```
+
+
+Row
+-------------------------------------
+    
+### Chart 1
+    
+```{r}
+
+```
+   
+Row
+-------------------------------------
+    
+### New Cases
+    
+```{r}
+cases <- 5
+valueBox(cases, icon = "fa-users")
+```
+    
+### Chart 3
+
+```{r}
+
+```

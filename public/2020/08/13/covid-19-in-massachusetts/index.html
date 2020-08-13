@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+<title>COVID-19 in Massachusetts - Mara&#39;s World</title>
+<meta property="og:title" content="COVID-19 in Massachusetts - Mara&#39;s World">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://github.com/MaraAlexeev">GitHub</a></li>
+    
+    <li><a href="https://twitter.com/MaraAlexeev">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">2 min read</span>
+    
+
+    <h1 class="article-title">COVID-19 in Massachusetts</h1>
+
+    
+    <span class="article-date">2020-08-13</span>
+    
+
+    <div class="article-content">
+      
+
+
+<pre class="r"><code>library(blogdown)</code></pre>
+<p>I saw a tweet today that inspired me to put my newfound skills in flexdashboard to use. I might be biting off too much to chew but isn’t that always the case!!</p>
+<p>Here’s the <a href="https://twitter.com/meghanbkelly/status/1293525325339656195">inspirational tweet</a>:
+<img src="/post/2020-08-13-covid-19-in-massachusetts_files/tweet_screen_capture_august2020_covid.png" style="width:60.0%;height:60.0%" alt="Screenshot of tweet about COVID in MA" /></p>
+<p>A few things that I want to think about and do for this.
+- I want to create a very simple flexdashboard
+- I want to figure out how to display the flexdashboard on my blog
+- I want to learn a few simple things about a maps package to put on the flexdashboard and hopefully be able to allow for a viewer to hover over the county and see the name and specific details about the county
+- Learn how to embed tweets directly on the blog</p>
+<div id="flexdashboard" class="section level1">
+<h1>Flexdashboard</h1>
+<p>I would like to take some of the data released by the state of Massachusetts from this past week to create a flexdashboard that tells you about the number of new cases, displays a map with some hover over text/additional information present, and has a gauge that is red/yellow/green based on what the state thinks is the overall status of cases are for the week.</p>
+<p><a href="https://www.mass.gov/info-details/covid-19-response-reporting">Raw data from Massachusetts</a></p>
+</div>
+<div id="displaying-dashboard" class="section level1">
+<h1>Displaying dashboard</h1>
+<p>Due to how blogdown works, having a flexdashboard as a post on the blog doesn’t seem to work, but it seems possible to link to the Rmarkdown document that will appropriately render.</p>
+<p><a href="/post/covid_massachusetts_dashboard.html">Draft of my very first flexdashboard</a></p>
+</div>
+<div id="embeding-tweets" class="section level1">
+<h1>Embeding tweets</h1>
+<p>I wanted to directly embed the journalist’s tweets on the website. I found some online advice on this and it crashed my site! I did a work around by just putting in a link and then a screenshot of the tweet, but that seems a bit lame. I want to dig a bit deeper to see what the clever way is to do so.</p>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,21 @@
+---
+title: "Projects"
+author: "Mara Alexeev"
+date: "2019-08-31"
+---
+
+# Dashboard fun
+
+COVID-19 data from Massachusetts
+
+# Teaching
+
+# CV
+
+# TidyTuesday
+
+# Fun R Things
+
+# Cats
+
+# House Recipes

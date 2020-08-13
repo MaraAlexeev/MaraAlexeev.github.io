@@ -1,0 +1,43 @@
+name,desire,discomfort,type,desire_not_pregnant,discomfort_not_pregnant,frequency_of_eating_during_pregnancy,frequency_of_eating_prior_to_pregnancy
+raw tomatoes,4,8,vegetable,2,4,common,rarely
+tomato based sauce,4,10,vegetable,2,4,rarely,rarely
+kasha,5,1,grain,2,0,common,rarely
+oatmeal,2,1,grain,5,0,common,common
+chicken,1,5,protein,3,2,rarely,common
+beef,2,3,protein,4,2,rarely,common
+eggs,6,2,protein,3,1,common,common
+bread,5,1,grain,4,0,common,common
+milk,7,1,dairy,5,0,near daily,near daily
+coffee,9,2,beverage,10,1,near daily,near daily
+cappucino,1,4,beverage,8,1,almost never,near daily
+juice,8,1,beverage,4,0,common,rarely
+coca-cola,9,1,beverage,2,1,common,rarely
+french fries,9,1,potato,5,1,common,common
+salmon,7,1,protein,6,0,common,common
+hashbrowns,7,2,potato,2,0,common,rarely
+banana,2,0,fruit,2,0,common,common
+watermelon,9,0,fruit,7,0,common,rarely
+apples,9,0,fruit,7,0,near daily,common
+citrus,9,0,fruit,6,0,common,common
+yogurt,6,0,dairy,6,0,common,common
+raspberries,7,0,fruit,5,0,common,rarely
+blueberries,8,0,fruit,5,0,common,common
+strawberries,7,1,fruit,6,0,common,common
+sushi,9,2,protein,9,0,rarely,common
+ramen,9,6,soup,9,1,almost never,common
+toast,8,1,grain,6,0,rarely,rarely
+poke,4,1,protein,9,0,almost never,common
+butterbort,5,1,grain,4,0,common,common
+ice cream,4,1,dairy,6,0,rarely,rarely
+acai bowl,3,1,fruit,6,0,rarely,common
+iced tea,7,1,beverage,0,0,common,almost never
+pasta,4,1,grain,5,0,common,common
+popcorn,6,1,grain,4,0,rarely,rarely
+pelmeni,4,2,protein,5,0,rarely,common
+carrots,8,0,vegetable,3,0,common,rarely
+mashed potatoes,6,0,potato,2,0,common,rarely
+oreos,7,2,sweet,5,0,rarely,rarely
+mozzarella,9,1,dairy,5,0,common,common
+paneer,9,0,dairy,4,0,rarely,rarely
+havarti,4,1,dairy,5,0,rarely,common
+goat cheese,5,1,dairy,3,0,rarely,rarely

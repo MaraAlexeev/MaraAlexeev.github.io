@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Mara&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>COVID-19 in Massachusetts</title>
+      <link>/2020/08/13/covid-19-in-massachusetts/</link>
+      <pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/08/13/covid-19-in-massachusetts/</guid>
+      <description>library(blogdown)I saw a tweet today that inspired me to put my newfound skills in flexdashboard to use. I might be biting off too much to chew but isn’t that always the case!!
+Here’s the inspirational tweet:A few things that I want to think about and do for this.- I want to create a very simple flexdashboard- I want to figure out how to display the flexdashboard on my blog- I want to learn a few simple things about a maps package to put on the flexdashboard and hopefully be able to allow for a viewer to hover over the county and see the name and specific details about the county- Learn how to embed tweets directly on the blog</description>
+    </item>
     
     <item>
       <title>Experiences with breastfeeding</title>
