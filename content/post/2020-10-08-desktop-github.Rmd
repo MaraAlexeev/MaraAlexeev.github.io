@@ -1,0 +1,44 @@
+---
+title: Adventures in Brookline
+author: Mara Alexeev
+date: '2020-10-08'
+slug: projects
+categories: []
+tags: []
+---
+
+# Time Files
+
+It's been ages since I was able to put anything here. I was busy moving, having a baby, starting fellowship, and starting graduate classes, but excuses are excuses!
+
+I have some quick things to share.
+
+## Work from home updates
+
+It makes version control fun! Check it out.
+
+A second monitor is the best. 
+
+A foot rest is good. 
+
+Thankfully I finally figured out how to toggle my speakers and headphones without physically having to touch them. A case of very poorly name options in my sound management software and me being too lazy to Google the issue.
+
+Breastfeeding a baby while working at a computer all day is mostly difficult because a) it's really hard b) your arms are at different heights (one over the baby's body and one around the head), c) it ends up being easier to keep baby on your lap all day instead of putting him down for a nap. I ought really to do a post on my pillow contraption that I have made that makes this even possible. 
+
+## Recent reading
+
+I read [bookdown](https://bookdown.org/yihui/bookdown/) and finished my first read through of [R for Data Science](https://r4ds.had.co.nz/). I have been reading R4DS for over a year, but I had read some chapters 5 times and others never until this week. My little eyeballs have seen every chapter now. I love re-reading chapters because I often learn so much more the second time through!
+
+## R-Ladies Boston
+
+I got involved with R-Ladies Boston this summer, and hope to do a post here soon to get started on a cv/resume workshop I will run in November. 
+
+## Recipe goal!
+
+For years I have wanted to do some recipe management for our family, and now the time has come!
+
+- I started an R project using RSQLite to create a database with recipes and important information. So far just toy examples, but I am thinking about what to include and how I want to use it.
+
+- I read bookdown and am excited about writing a book for our family with our recipes.
+
+- Excited to make a shiny app that can modify recipes for size and then hopefully a more complicated one on picking what to make based on things like what sounds good (a style of food) or what you have at home to cook with. I hope to that I can figure out how to make a shopping list from this too!
