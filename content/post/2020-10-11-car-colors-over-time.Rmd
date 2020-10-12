@@ -1,0 +1,86 @@
+---
+title: Car Colors Over Time
+author: ''
+date: '2020-10-11'
+slug: car-colors-over-time
+categories: []
+tags: []
+---
+
+# HMB (Hold my baby...)
+
+This is my first attempt at quick plot beautification. "Hold my beer" is a punchline (or lead up) to many a joke in the US with often a picture or graphic at the end of the joke to demonstrate without words what happened. I don't like beer, but I do have a baby that demands me very frequently. This is an attempt of my self care for my brain during these early months.
+
+## Car Colors
+
+My husband showed me a [graphic of car colors](https://www.reddit.com/r/dataisbeautiful/comments/j7yfqb/oc_car_color_distribution_broken_down_by/) over time that I thought was fun, but I also thought I could make it prettier. 
+
+A quick Google source lead me here to see the post he had shown me and here is where I grabbed the [OP's data](https://pastebin.com/1gb8vAAr). 
+
+```{r libraries, include=FALSE}
+library(tidyverse)
+library(lubridate)
+library(plyr)
+library(ggthemes)
+```
+```{r import_clean_data}
+
+car_colors <- read.delim2("~/Tidy_TidyTuesday/data/car_color.txt")
+
+car_long <- pivot_longer(car_colors, 2:14, names_to = "color", values_to = "percentage") 
+
+car_long$percentage <- sub("%", "", car_long$percentage)
+
+car_long$percentage <- sub(",", ".", car_long$percentage)
+
+car_long$percentage <- as.numeric(car_long$percentage)
+
+car_long$color <- as_factor(car_long$color) 
+
+color_names <- levels(car_long$color)
+
+car_long$color <- revalue(car_long$color, c("Biege" = "Beige"))
+
+car_long$color <- factor(car_long$color, levels = c(
+  "Purple",
+    "Blue",
+    "Green",
+    "Yellow",
+    "Gold",
+    "Beige",
+    "Brown" , 
+    "Red" , 
+    "Burgundy" , 
+    "White" ,
+    "Silver" ,
+    "Gray" ,
+    "Black" )
+)
+```
+
+## Plot this thang!
+
+```{r}
+plot <- ggplot(car_long, aes(x = Year, y = percentage)) +
+  geom_col(aes(fill = color)) +
+  scale_fill_manual(values = c(
+    "Purple" = "#800080",
+    "Blue" = "#0000ff",
+    "Green" = "#008000",
+    "Yellow" = "#ffff00",
+    "Gold" = "#ffd700",
+    "Beige" = "#f5f5dc",
+    "Brown" = "#a52a2a", 
+    "Red" = "#ff0000", 
+    "Burgundy" = "#800020", 
+    "White" = "#ffffff",
+    "Silver" = "#c0c0c0",
+    "Gray" = "#808080",
+    "Black" = "#000000")
+  ) 
+
+plot +
+    labs(title = "Colors of Cars Over Time in Poland", subtitle = "Mara's quick redo", x = "Production Year", y = "Percentage", caption = "OP: https://tinyurl.com/y4hhlmbc") + 
+  theme_economist() +
+  theme(legend.position = "none")
+```
