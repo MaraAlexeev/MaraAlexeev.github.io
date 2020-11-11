@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mara&#39;s World</title>
+    <title>Mara&#39;s Life</title>
     <link>/</link>
-    <description>Recent content on Mara&#39;s World</description>
+    <description>Recent content on Mara&#39;s Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Creating a new cv with R!</title>
+      <link>/2020/11/11/creating-a-new-cv-with-r/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/11/11/creating-a-new-cv-with-r/</guid>
+      <description>Because I hate reformating my CV I was searching online on writing CV&amp;rsquo;s with R. I found a great package datadrivencv that has a great template to create a CV from a spreadsheet that keeps your career information tidy and in one place, and allows you to use the same source to create different versions of a CV from minor modifications.
+Another side benefit of this, is it encourages you to store you career info in one place instead of just scattered about!</description>
+    </item>
     
     <item>
       <title>Car Colors Over Time</title>
@@ -32,16 +42,6 @@ Work from home updatesDesktop Github: It makes version control fun! Check it ou
 A second monitor is the best.
 A foot rest is good.
 Thankfully I finally figured out how to toggle my speakers and headphones without physically having to touch them.</description>
-    </item>
-    
-    <item>
-      <title>COVID-19 in Massachusetts</title>
-      <link>/2020/08/13/covid-19-in-massachusetts/</link>
-      <pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/08/13/covid-19-in-massachusetts/</guid>
-      <description>library(blogdown)## Warning: package &amp;#39;blogdown&amp;#39; was built under R version 3.6.3I saw a tweet today that inspired me to put my newfound skills in flexdashboard to use. I might be biting off too much to chew but isn’t that always the case!!
-Here’s the inspirational tweet:A few things that I want to think about and do for this.- I want to create a very simple flexdashboard- I want to figure out how to display the flexdashboard on my blog- I want to learn a few simple things about a maps package to put on the flexdashboard and hopefully be able to allow for a viewer to hover over the county and see the name and specific details about the county- Learn how to embed tweets directly on the blog</description>
     </item>
     
     <item>
@@ -193,25 +193,6 @@ Figure Labelling autodistill packagehtml_document2 yaml outputxaringanposter
       <guid>/2019/08/31/the-first-post/</guid>
       <description>This is my first post on my new website built with the R package blogdown, the help of many online help pages, and my lovely husband. I am using Github and Netlify as well. I don’t have the energy to write a post about how I built this, but here is the list of things that caused pain:
 in my config.toml file I had replaced the baseurl default of baseurl = &#34;</description>
-    </item>
-    
-    <item>
-      <title>Car Colors Over Time</title>
-      <link>/1/01/01/car-colors-over-time/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/1/01/01/car-colors-over-time/</guid>
-      <description>HMB (Hold my baby…)This is my first attempt at quick plot beautification. “Hold my beer” is a punchline (or lead up) to many a joke in the US with often a picture or graphic at the end of the joke to demonstrate without words what happened. I don’t like beer, but I do have a baby that demands me very frequently. This is an attempt of my self care for my brain during these early months.</description>
-    </item>
-    
-    <item>
-      <title>cv</title>
-      <link>/cv/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cv/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
     </item>
     
   </channel>
