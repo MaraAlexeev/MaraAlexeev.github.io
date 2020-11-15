@@ -15,10 +15,6 @@ I love learning human and computer languages. I’ve had a long love affair with
 Interested in connecting or collaborating? Send me a message on [Twitter!](https://twitter.com/MaraAlexeev)
 
 ![](/./about_files/MaraAtTheTandy.jpg){width=75% height=75%}
-```{r, out.width="75%", echo =FALSE}
-knitr::include_graphics("./MaraAtTheTandy.jpg", error = FALSE)
-
-```
 
 >I can run this computer, Dad.
 >
