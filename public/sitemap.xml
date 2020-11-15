@@ -78,17 +78,7 @@
   </url>
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/2020/01/25/back-in-the-saddle/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -123,6 +113,11 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2019-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/projects/</loc>
     <lastmod>2019-08-31T00:00:00+00:00</lastmod>
   </url>
@@ -130,6 +125,11 @@
   <url>
     <loc>/2019/08/31/the-first-post/</loc>
     <lastmod>2019-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
