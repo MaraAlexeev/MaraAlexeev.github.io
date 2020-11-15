@@ -2,12 +2,11 @@
 title: "About"
 author: "Mara Alexeev"
 date: "2020-11-15"
-
 ---
 
 # Who am I?
 
-My name is Mara Alexeev. I currently live in Brookline, MA, but I grew up on a farm in central Iowa. In fourth grade I was in love with space and wanted to be a part time astronaut and part time farmer.
+My name is Mara Alexeev. I currently live in Brookline, Massachusetts, but I grew up on a farm in central Iowa. In fourth grade I was in love with space and wanted to be a part time astronaut and part time farmer.
 
 Currently, I am the doing a fellowship in Clinical Informatics at Boston Children's Hospital. 
 
