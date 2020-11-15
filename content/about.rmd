@@ -5,7 +5,7 @@ date: "2020-11-15"
 
 ---
 
-# About
+# Who am I?
 
 My name is Mara Alexeev. I currently live in Brookline, MA, but I grew up on a farm in central Iowa. In fourth grade I was in love with space and wanted to be a part time astronaut and part time farmer.
 
@@ -16,7 +16,7 @@ I love learning human and computer languages. I’ve had a long love affair with
 Interested in connecting or collaborating? Send me a message on [Twitter!](https://twitter.com/MaraAlexeev)
 
 ```{r, out.width="75%", echo =FALSE}
-knitr::include_graphics("./MaraAtTheTandy.jpg")
+knitr::include_graphics("./MaraAtTheTandy.jpg", error = FALSE)
 
 ```
 
