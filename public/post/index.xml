@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Mara&#39;s Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My motto</title>
+      <link>/2020/11/17/my-motto/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/11/17/my-motto/</guid>
+      <description>My life so far in Clinical Informatics I&amp;rsquo;m attending the AMIA 2020 Virtual Conference this week. Lots of excellent talks. However, I wanted to put it out there for myself and my future self that my motto for my work is: the best care should be the easiest care to provide.</description>
+    </item>
     
     <item>
       <title>Creating a new cv with R!</title>
