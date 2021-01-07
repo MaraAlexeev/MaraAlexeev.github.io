@@ -1,7 +1,7 @@
 ---
 title: "About"
 author: "Mara Alexeev"
-date: "2020-11-15"
+date: '2020-11-15'
 ---
 
 # Who am I?
@@ -12,7 +12,20 @@ Currently, I am the doing a fellowship in Clinical Informatics at Boston Childre
 
 I love learning human and computer languages. I’ve had a long love affair with Russian and German, and recently became interested in American Sign Language (and also the Russian Manual Alphabet!) and thinking about learning Norwegian. On the computer front, I’m learning R and specifically enjoy data visualization and open and reproducible analysis and research.
 
-Interested in connecting or collaborating? Send me a message on [Twitter!](https://twitter.com/MaraAlexeev)
+Interested in connecting or collaborating? Send me a message!
+
+<form
+  action="https://formspree.io/f/meqpvabl"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="text" name="_replyto">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
 
 ![](/./about_files/MaraAtTheTandy.jpg){width=75% height=75%}
 
