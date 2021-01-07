@@ -213,12 +213,11 @@ Figure Labelling autodistill packagehtml_document2 yaml outputxaringanposter
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/projects/</guid>
-      <description>Public Presentations and MaterialsHere’s a collection of my public materials. I intend to post future presentations and materials here as of January 2021, but hope to dig out older material and post those as I am able.
-What I’m thinking about these daysClinical Decision Support
-FHIR Apps
-21st Century Cares Act
-Masters Capstone
-Last updated on January 07, 2021</description>
+      <description>last_update &amp;lt;- Sys.Date()t &amp;lt;- format(last_update, format=&amp;quot;%B %d, %Y&amp;quot;)Public Presentations and Materials Here&amp;rsquo;s a collection of my public materials. I intend to post future presentations and materials here as of January 2021, but hope to dig out older material and post those as I am able.
+What I&amp;rsquo;m thinking about these days   Clinical Decision Support
+  FHIR Apps
+  21st Century Cares Act
+  Masters Capstone</description>
     </item>
     
   </channel>
