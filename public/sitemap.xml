@@ -133,17 +133,16 @@
   </url>
   
   <url>
-    <loc>/projects/</loc>
-    <lastmod>2019-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/2019/08/31/the-first-post/</loc>
     <lastmod>2019-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/</loc>
   </url>
   
 </urlset>

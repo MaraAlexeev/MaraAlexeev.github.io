@@ -27,6 +27,11 @@ Interested in connecting or collaborating? Send me a message!
     <textarea name="message"></textarea>
   </label>
 
+  <!-- your other form fields go here -->
+
+  <button type="submit">Send</button>
+</form>
+
 ![](/./about_files/MaraAtTheTandy.jpg){width=75% height=75%}
 
 >I can run this computer, Dad.

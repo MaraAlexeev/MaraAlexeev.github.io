@@ -198,16 +198,6 @@ Figure Labelling autodistill packagehtml_document2 yaml outputxaringanposter
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>/projects/</link>
-      <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/projects/</guid>
-      <description>Dashboard funCOVID-19 data from Massachusetts
-TeachingCVTidyTuesdayFun R ThingsCatsHouse Recipes</description>
-    </item>
-    
-    <item>
       <title>The first post of the new website</title>
       <link>/2019/08/31/the-first-post/</link>
       <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
@@ -215,6 +205,17 @@ Figure Labelling autodistill packagehtml_document2 yaml outputxaringanposter
       <guid>/2019/08/31/the-first-post/</guid>
       <description>This is my first post on my new website built with the R package blogdown, the help of many online help pages, and my lovely husband. I am using Github and Netlify as well. I don’t have the energy to write a post about how I built this, but here is the list of things that caused pain:
 in my config.toml file I had replaced the baseurl default of baseurl = &#34;</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/</guid>
+      <description>Public Presentations and MaterialsHere’s a list of my public materials. I intend to post future presentations and materials here as of January 2021, but hope to dig out older material and post as well.
+What I’m thinking about these daysClinical Decision Support
+</description>
     </item>
     
   </channel>
