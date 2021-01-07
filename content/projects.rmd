@@ -2,6 +2,7 @@
 title: "Projects"
 author: "Mara Alexeev"
 ---
+
 ```{r, echo=FALSE}
 last_update <- Sys.Date()
 t <- format(last_update, format="%B %d, %Y")
