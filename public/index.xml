@@ -6,7 +6,7 @@
     <description>Recent content on Mara&#39;s Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,20 @@
       <description>Clinical Thinking is Hard It&amp;rsquo;s hard to make decisions. It&amp;rsquo;s really hard to make good decisions. Sometimes I&amp;rsquo;m not even sure what good means. And it certainly means different things to different people during a clinical encounter.
 I have said for years, but don&amp;rsquo;t think I have written down one of my little phrases I think about a lot in pediatrics:
  Sometimes &amp;ldquo;better safe than sorry&amp;rdquo; is less safe and more worry.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>/projects/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/</guid>
+      <description>Public Presentations and MaterialsHere’s a collection of my public materials. I intend to post future presentations and materials here as of January 2021, but hope to dig out older material and post those as I am able.
+What I’m thinking about these daysClinical Decision Support
+FHIR Apps
+21st Century Cares Act
+Masters Capstone
+Last updated on January 07, 2021</description>
     </item>
     
     <item>
@@ -205,19 +219,6 @@ Figure Labelling autodistill packagehtml_document2 yaml outputxaringanposter
       <guid>/2019/08/31/the-first-post/</guid>
       <description>This is my first post on my new website built with the R package blogdown, the help of many online help pages, and my lovely husband. I am using Github and Netlify as well. I don’t have the energy to write a post about how I built this, but here is the list of things that caused pain:
 in my config.toml file I had replaced the baseurl default of baseurl = &#34;</description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/projects/</guid>
-      <description>last_update &amp;lt;- Sys.Date()t &amp;lt;- format(last_update, format=&amp;quot;%B %d, %Y&amp;quot;)Public Presentations and Materials Here&amp;rsquo;s a collection of my public materials. I intend to post future presentations and materials here as of January 2021, but hope to dig out older material and post those as I am able.
-What I&amp;rsquo;m thinking about these days   Clinical Decision Support
-  FHIR Apps
-  21st Century Cares Act
-  Masters Capstone</description>
     </item>
     
   </channel>
