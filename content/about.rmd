@@ -20,16 +20,17 @@ Interested in connecting or collaborating? Send me a message!
 >
   <label>
     Your email:
+    <br>
     <input type="text" name="_replyto">
   </label>
+  <br>
   <label>
     Your message:
+    <br>
     <textarea name="message"></textarea>
   </label>
 
-  <!-- your other form fields go here -->
-
-  <button type="submit">Send</button>
+  <button type="submit">Send Mara a Nice Message</button>
 </form>
 
 ![](/./about_files/MaraAtTheTandy.jpg){width=75% height=75%}
