@@ -1,0 +1,67 @@
+---
+title: Loving dplyr, in_any and if_all
+author: Mara Alexeev
+date: '2021-03-15'
+slug: loving-dplyr-in-any-and-if-all
+categories: []
+tags:
+  - R
+  - pediatrics
+---
+
+I'm in love with some new `dplyr` functions: `if_any()` and `if_all`. 
+
+Read all about it [here](https://www.tidyverse.org/blog/2021/02/dplyr-1-0-4-if-any/).
+
+Below I'll share the problem I solved using one of these new functions. 
+
+```{r libraries, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(googlesheets4)
+library(kableExtra)
+```
+
+```{r getthatdata, message = FALSE}
+data <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1TgPQTyVhV3tlrfo-Luw-fxBWLQ_LtQp9s5IV-1_9qMo/edit?usp=sharing", sheet = "Sheet1")
+```
+
+Here's the set up for the problem and solution. Imagine you are looking at unique encounter visits for patients and the associated diagnosis codes. You get a spreadsheet that has an id column followed by columns of diagnosis codes. Patients have different numbers of encounter diagnoses. The diagnosis code you are interested in could be in any one of the columns for any patient, so you need to pay attention to all columns. Let's take a peak at the simplified data. Note that while these codes look vaguely like real diagnosis codes in the US, I just made some up for this example in the general shape of those codes which are usually a letter followed by 2 numbers, a period, then more numbers. Acute serous otitis media, right ear is represented as **H66.01** while otitis media, unspecified, bilateral is coded as **H66.93**. 
+
+```{r fakedata}
+
+head(data) %>% 
+  kable() %>%
+  kable_material(c("striped", "hover"))
+
+```
+
+Now imagine we are interested in finding all patient encounters that had a code for otitis media (ie has a diagnosis code that starts with **H66**). If our data were only in one column, this would be a simple use of `dpylr::filter()` looking for string match of our code of interest. But our data is not that because the data is spread out among three columns. In real patient data you might have 10+ columns. You could could pivot your data longer, and make every column with a diagnosis code a new row so that each patient encounter would have many rows, and do a filter on the new mega-diagnosis column, but I like to be as lazy as possible and also learn new things. ENTER `if_any()`!
+
+```{r}
+
+awesome <- data %>%
+           dplyr::filter(if_any(starts_with("enc"), ~ str_detect(., pattern = "H66")))
+
+head(awesome) %>% 
+  kable() %>%
+  kable_material(c("striped", "hover"))
+```
+
+Wow, there it all is! I have found all three of my rows that have a **H66** code in any one of the columns.
+
+A few other fun things from `dplyr` are the `starts_with()` and `ends_with()` functions (they have more friends you can read about [here](https://dplyr.tidyverse.org/reference/select.html)).
+
+For example, if the `enc_dx*_name` columns needed to be excluded from my filter I could have done it with this simple line of code.
+
+```{r}
+smaller_data <- data %>%
+                  dplyr::select(!ends_with("_name"))
+
+head(smaller_data) %>% 
+  kable() %>%
+  kable_material(c("striped", "hover"))
+```
+
+
+Enjoy!!
+
