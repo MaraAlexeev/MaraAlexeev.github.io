@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Loving dplyr, in_any and if_all</title>
+      <link>/2021/03/15/loving-dplyr-in-any-and-if-all/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/03/15/loving-dplyr-in-any-and-if-all/</guid>
+      <description>I’m in love with some new dplyr functions: if_any() and if_all.
+Read all about it here.
+Below I’ll share the problem I solved using one of these new functions.
+library(tidyverse)library(googlesheets4)library(kableExtra)data &amp;lt;- googlesheets4::read_sheet(&amp;quot;https://docs.google.com/spreadsheets/d/1TgPQTyVhV3tlrfo-Luw-fxBWLQ_LtQp9s5IV-1_9qMo/edit?usp=sharing&amp;quot;, sheet = &amp;quot;Sheet1&amp;quot;)Here’s the set up for the problem and solution. Imagine you are looking at unique encounter visits for patients and the associated diagnosis codes. You get a spreadsheet that has an id column followed by columns of diagnosis codes.</description>
+    </item>
+    
+    <item>
       <title>Less Safe and More Worry</title>
       <link>/2021/01/07/less-safe-and-more-worry/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
