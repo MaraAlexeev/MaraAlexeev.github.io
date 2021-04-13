@@ -1,0 +1,18 @@
+---
+title: Embeding Shiny Apps in a Post
+author: Mara Alexeev
+date: '2021-04-13'
+slug: embeding-shiny-apps-in-a-post
+categories: []
+tags: []
+runtime: shiny
+---
+
+
+# Bringing some Shiny to my blog
+
+I'm in a data viz class this semester, so I'm taking the opportunity to figure out how to bring my Shiny apps to my website. 
+
+## Problem 1
+
+<iframe height="800" width="100%" frameborder="no" src="https://maraalexeev.shinyapps.io/706_pset2_q1/"> </iframe>
