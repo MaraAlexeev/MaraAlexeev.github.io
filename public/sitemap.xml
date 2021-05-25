@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/2021/04/15/embeding-shiny-apps-in-a-post/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
+    <loc>/post/</loc>
+    <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>/tags/r/</loc>
+    <lastmod>2021-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2021/05/25/running-my-first-r-workshop/</loc>
+    <lastmod>2021-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2021/04/15/embeding-shiny-apps-in-a-post/</loc>
     <lastmod>2021-04-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -19,16 +34,6 @@
   
   <url>
     <loc>/tags/pediatrics/</loc>
-    <lastmod>2021-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2021-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2021-03-15T00:00:00+00:00</lastmod>
   </url>
   

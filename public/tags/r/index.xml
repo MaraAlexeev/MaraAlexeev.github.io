@@ -6,10 +6,20 @@
     <description>Recent content in R on Mara&#39;s Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 May 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Running My First R Workshop</title>
+      <link>/2021/05/25/running-my-first-r-workshop/</link>
+      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/05/25/running-my-first-r-workshop/</guid>
+      <description>Clinical Informatics Conference 2021I attended the virtual Clinical Informatics Conference last week, and I also did a workshop on R for Clinical Informatics. This was the first time I had ever developed material for a workshop and run a workshop. It was a solo operation, but fortunately I had some great support from my fellowship program beforehand to get prepared.
+All the materials can be found here. Note the RStudio Cloud workspace has been turned off, but all the materials are available on that Github repo.</description>
+    </item>
     
     <item>
       <title>Loving dplyr, in_any and if_all</title>

@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Running My First R Workshop</title>
+      <link>/2021/05/25/running-my-first-r-workshop/</link>
+      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/05/25/running-my-first-r-workshop/</guid>
+      <description>Clinical Informatics Conference 2021I attended the virtual Clinical Informatics Conference last week, and I also did a workshop on R for Clinical Informatics. This was the first time I had ever developed material for a workshop and run a workshop. It was a solo operation, but fortunately I had some great support from my fellowship program beforehand to get prepared.
+All the materials can be found here. Note the RStudio Cloud workspace has been turned off, but all the materials are available on that Github repo.</description>
+    </item>
+    
+    <item>
       <title>Embeding Shiny Apps in a Post</title>
       <link>/2021/04/15/embeding-shiny-apps-in-a-post/</link>
       <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
