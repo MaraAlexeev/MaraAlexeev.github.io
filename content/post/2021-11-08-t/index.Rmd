@@ -29,9 +29,13 @@ library(ggthemes)
 
 In July 2020, my husband presented me with two tweets about change of the average age of death over time ([tweet 1](https://twitter.com/patrickc/status/1284582707897364480?ref_src=twsrc%5Etfw) and [tweet 2](https://twitter.com/paulg/status/1284578860827324417)) and challenged me to make some cooler graphs. 
 
-![](images/tweet_1.png)
+```{r tweet-1, message=FALSE, warning=FALSE, echo=FALSE}
+knitr::include_graphics("~/All_of_Maras_R/website/MaraAlexeev.github.io/content/post/2021-11-08-t/images/tweet_1.png")
+```
 
-![](images/tweet_2.png)
+```{r tweet-2, message=FALSE, warning=FALSE, echo=FALSE}
+knitr::include_graphics("~/All_of_Maras_R/website/MaraAlexeev.github.io/content/post/2021-11-08-t/images/tweet_2.png")
+```
 
 # Motivations
 

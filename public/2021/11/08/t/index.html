@@ -88,8 +88,8 @@
 <div id="inspiration" class="section level1">
 <h1>Inspiration</h1>
 <p>In July 2020, my husband presented me with two tweets about change of the average age of death over time (<a href="https://twitter.com/patrickc/status/1284582707897364480?ref_src=twsrc%5Etfw">tweet 1</a> and <a href="https://twitter.com/paulg/status/1284578860827324417">tweet 2</a>) and challenged me to make some cooler graphs.</p>
-<p><img src="C:/Users/Mara%20and%20Boris/OneDrive/Documents/All_of_Maras_R/website/MaraAlexeev.github.io/content/post/2021-06-07-age-of-death-over-time-from-wikipedia/tweet_1.png" /><!-- --></p>
-<p><img src="C:/Users/Mara%20and%20Boris/OneDrive/Documents/All_of_Maras_R/website/MaraAlexeev.github.io/content/post/2021-06-07-age-of-death-over-time-from-wikipedia/tweet_2.png" /><!-- --></p>
+<p><img src="images/tweet_1.png" /><!-- --></p>
+<p><img src="images/tweet_2.png" /><!-- --></p>
 </div>
 <div id="motivations" class="section level1">
 <h1>Motivations</h1>
@@ -168,8 +168,8 @@ library(plotly)
 library(DT)
 library(scales)
 library(ggthemes)
-knitr::include_graphics(&quot;~/All_of_Maras_R/website/MaraAlexeev.github.io/content/post/2021-06-07-age-of-death-over-time-from-wikipedia/tweet_1.png&quot;)
-knitr::include_graphics(&quot;~/All_of_Maras_R/website/MaraAlexeev.github.io/content/post/2021-06-07-age-of-death-over-time-from-wikipedia/tweet_2.png&quot;)
+knitr::include_graphics(&quot;~/All_of_Maras_R/website/MaraAlexeev.github.io/content/post/2021-11-08-t/images/tweet_1.png&quot;)
+knitr::include_graphics(&quot;~/All_of_Maras_R/website/MaraAlexeev.github.io/content/post/2021-11-08-t/images/tweet_2.png&quot;)
 
 my_wiki_query &lt;- query_wikidata(&#39;SELECT ?item ?dob ?dod ?sex_or_gender WHERE {
   ?item wdt:P31 wd:Q5;
@@ -311,7 +311,7 @@ plot_average_lifespan_by_sex_dc &lt;- average_lifespan_by_sex_dc %&gt;%
   geom_smooth() +
   geom_point(alpha = 0.05) +
   scale_color_manual(labels = c(&quot;Female&quot;, &quot;Male&quot;), values = c(female_color, male_color)) +
-  labs(title = &quot;Average age over time by sex&quot;,
+  labs(title = &quot;Average age of death over time by sex&quot;,
        x = &quot;Death Year Cohort&quot;,
        y = &quot;Age&quot;, 
        color = &quot;Sex&quot;) 

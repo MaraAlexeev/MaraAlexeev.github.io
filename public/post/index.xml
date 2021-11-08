@@ -24,18 +24,6 @@ InspirationIn July 2020, my husband presented me with two tweets about change o
     </item>
     
     <item>
-      <title>Age of Death Over Time from Wikipedia</title>
-      <link>/2021/06/07/age-of-death-over-time-from-wikipedia/</link>
-      <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/2021/06/07/age-of-death-over-time-from-wikipedia/</guid>
-      <description>library(tidyverse)library(WikidataQueryServiceR)library(lubridate)library(stringr)So last summer (it’s been a busy year) my husband showed me a tweet and challenged me to make some cool graphs.
-The inciting posts were these:
-Of people with Wikipedia articles, average age at death of people who died in a given year.
-[Slightly smoothed; incomplete dataset (~50k deaths); only including deaths age &amp;gt;= 20. I previously tweeted a version with x = year of birth, but decline in recent cohorts was confusing.</description>
-    </item>
-    
-    <item>
       <title>Running My First R Workshop</title>
       <link>/2021/05/25/running-my-first-r-workshop/</link>
       <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
