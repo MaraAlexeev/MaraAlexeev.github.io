@@ -1,0 +1,424 @@
+---
+title: "Today? Alt responses to give the God of Death"
+author: Mara Alexeev
+date: '2021-11-08'
+slug: t
+categories: []
+tags: []
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<blockquote>
+<p>“There is only one god and his name is death. And there is only one thing we say to death: <strong>Not today</strong>.”</p>
+<p>― Syrio Forel (Game of Thrones S1:Ep6: A golden crown)</p>
+</blockquote>
+<p>While Game of Thrones fans are fond of refusing the God of Death, Wikipedia has lots of data about people who did say: Ok, today is the day.</p>
+<div id="inspiration" class="section level1">
+<h1>Inspiration</h1>
+<p>In July 2020, my husband presented me with two tweets about change of the average age of death over time (<a href="https://twitter.com/patrickc/status/1284582707897364480?ref_src=twsrc%5Etfw">tweet 1</a> and <a href="https://twitter.com/paulg/status/1284578860827324417">tweet 2</a>) and challenged me to make some cooler graphs.</p>
+<p><img src="images/tweet_1.png" /></p>
+<p><img src="images/tweet_2.png" /></p>
+</div>
+<div id="motivations" class="section level1">
+<h1>Motivations</h1>
+<p>With this post, I want to do three things:</p>
+<ul>
+<li><p>See if I could make more engaging graphs than the original twitter post using R</p></li>
+<li><p>Learn to pull data from <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> using the {WikidataQueryServiceR} package</p></li>
+<li><p>Visualize the differences between males and females in the data</p></li>
+</ul>
+<p>I work in healthcare data, so often I cannot share my data or analysis for privacy reasons. This post is my way to share some of the techniques I use at work with data that <strong>CAN</strong> see the light of day.</p>
+<p>Here I will walk you start to finish, from data pull to pretty plots, to give you some inspiration for your own data analysis projects.</p>
+</div>
+<div id="data-sources" class="section level1">
+<h1>Data sources</h1>
+<p>I originally started working on this analysis and blog post on July 22, 2020, so I have learned a lot of data analytic and programming skills since then, but at the time I had never written a SQL (or one of the many similar SQL-like languages) query outside of an online programming tutorial.</p>
+<p>This is the command I used to grab the data from the Wikidata Query Service on November 6, 2021 using the {<a href="https://cran.r-project.org/web/packages/WikidataQueryServiceR/WikidataQueryServiceR.pdf">WikidataQueryServiceR</a>} package.</p>
+<pre class="r"><code>my_wiki_query &lt;- query_wikidata(&#39;SELECT ?item ?dob ?dod ?sex_or_gender WHERE {
+  ?item wdt:P31 wd:Q5;
+  OPTIONAL { ?item wdt:P570 ?dod }
+  OPTIONAL { ?item wdt:P569 ?dob }
+  OPTIONAL { ?item wdt:P21 ?sex_or_gender. }
+}&#39;)</code></pre>
+<p>With this short command, I was able to quite effortlessly pull data on 3207218 records.</p>
+<p>As I started out learning R and playing with data, I knew nothing about querying publicly available sources of data. Being able to pull over 3 million rows of data for a toy projects is an amazing feat!</p>
+<p>If you are just starting out in learning R or want to find some great pre-cleaned datasets to work with, check out <a href="https://github.com/rfordatascience/tidytuesday">Tidy Tuesday</a> and follow people’s work on twitter using the <a href="https://twitter.com/hashtag/TidyTuesday?src=hashtag_click">#TidyTuesday hashtag</a>.</p>
+</div>
+<div id="understanding-the-data" class="section level1">
+<h1>Understanding the data</h1>
+<p>The first question I had about the distribution of data on time and by year. I decided to limit myself to the year 1000 onward to be somewhat comparable to the tweets that inspired this post. Here I created a plot to show the distribution of births counts by birth year.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Some notable things about the data is the increase of number of available records over time and with an expected drop off as the birth year gets closer to the current year.</p>
+<p>I expected a drop off because it takes most people a certain number of years of life to become notable enough to get a Wikipedia page. While I don’t do this here, I think it would be an interesting analysis to calculate the average age at which a person receives an entry to Wikipedia.</p>
+<p>A fun sub-analysis would to examine differences in the ages by category of notability. For example, I expect that athletes would have a younger age of first entry compared to Nobel Laureates.</p>
+<p>Another notable trend is that the birth count is high at the start of centuries (eg 1100) compared to intervening years with blunting of that phenomenon from 1500 onward and disappearing around 1800. My instinct is that this reflects the improvement in record keeping and preservation as we approach modern times.</p>
+</div>
+<div id="sex-based-differences" class="section level1">
+<h1>Sex based differences</h1>
+<p>My prediction prior to exploring the distribution is that women are represented at lower rates in the data compared to men. Graphing the data confirms this. I suppose the surprising insight from the graph is that the proportion of women represented in the data from about 1500 to 1800 is so consistent.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="average-age-of-death" class="section level1">
+<h1>Average age of death</h1>
+<p>I considered two ways to visualize the average of death. The first way is by grouping birth year and seeing the average age of death for that group. As you can see in the graph below, the major issue with that approach is that years close to the present will have very low average ages for death. This happens because in years less than roughly 80 years prior to 2021, anyone who has died, died relatively ‘young’.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<p>To avoid this problem, I instead grouped by death year to show the average age of death for people who died in that year. From these plots we see the average age of death for women flips to be higher than men in the early 20th century and continues until present time.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
+<p>To compare to tweet 1, I need to exclude deaths that occurred at 20 or under. By examining my plot verses that tweet, it is difficult to compare because I don’t know what smoothing function that the person used to calculate their line. The data before about 1600 has much more variability that data after that point.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Given this, I then investigated what the average age of death looks like from 1600 onward.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
+<p>Finally, let’s look at the data from 1800 onward to investigate the huge expected impacts of both World Wars. While I expected to see the huge impact on age of death in the years 1914 - 1918 and 1939 - 1945, I was surprised to see that the average age of death for both men and women was so affected. I anticipated that men, who are the primary actors in military actions, would have taken a bigger hit than women. While beyond the scope of this post, I think there might be something mysterious going on in the data around the turn of the 21st century with a spike upwards in both sex’s average age of death.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-8-1.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
+</div>
+<div id="dirty-data" class="section level1">
+<h1>Dirty data</h1>
+<p>Speaking of data issues, the final part of my analysis I’d like to share is how many birth dates are represented at higher rates than expected. As mentioned above, before 1800, many people had birth years listed as years like 1000 or 1300. Here I’ll also show how uncertainty of the day of births can be seen in the data.</p>
+<p>The plot below shows a yellow dot for date that has a 10% or greater number of birth dates than expected under the (somewhat tenuous) assumption that birth days will be distributed equally throughout the year. Notice the nearly straight lines on the y-axis which represents birth dates that fall on the start of a month.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>Difficult to see on the graph above, but here is a zoomed in version looking only at January birth dates. Here you can see that January 1st is over-represented in the data for literally ever year in the data from 1000 to 2021!</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+</div>
+<div id="wrap-up" class="section level1">
+<h1>Wrap up</h1>
+<p>I hope you have enjoyed my mini-journey of exploring the average age of the death over time. It only took me 17 months to finally finish it!</p>
+<p>What I hope I can do in future posts is look at data for people beyond those notable enough to have Wikidata entries to see the difference in life expectancies for those more and less notable.</p>
+</div>
+<div id="technical-notes" class="section level1">
+<h1>Technical notes</h1>
+<p>For anyone wanting to reproduce my work, you can see my raw code below as well as my R session information. If you repeat the analysis, your data will likely be different than mine as the data pull for this post was done on November 6, 2021.</p>
+<pre class="r"><code>library(tidyverse)
+library(WikidataQueryServiceR)
+library(lubridate)
+library(stringr)
+library(magrittr)
+library(plotly)
+library(DT)
+library(scales)
+library(ggthemes)
+
+my_wiki_query &lt;- query_wikidata(&#39;SELECT ?item ?dob ?dod ?sex_or_gender WHERE {
+  ?item wdt:P31 wd:Q5;
+  OPTIONAL { ?item wdt:P570 ?dod }
+  OPTIONAL { ?item wdt:P569 ?dob }
+  OPTIONAL { ?item wdt:P21 ?sex_or_gender. }
+}&#39;)
+
+my_wiki_query &lt;- readRDS(&quot;~/All_of_Maras_R/website/MaraAlexeev.github.io/my_wiki_query.rds&quot;)
+
+count_query &lt;- nrow(my_wiki_query)
+
+# sex notation
+my_wiki_query %&lt;&gt;% 
+  mutate(simplified_sex = case_when(
+    sex_or_gender == &quot;http://www.wikidata.org/entity/Q6581072&quot; ~ 1, #female
+    sex_or_gender == &quot;http://www.wikidata.org/entity/Q6581097&quot; ~ 2, #male
+    TRUE ~ 3 #not female, not male
+    ))
+
+my_wiki_query %&lt;&gt;% 
+  dplyr::distinct(item, .keep_all= TRUE) %&gt;% 
+  dplyr::mutate(full_year_of_birth = str_extract(dob, &quot;-?[:digit:]{4}&quot;)) %&gt;% 
+  dplyr::mutate(full_year_of_death = str_extract(dod, &quot;-?[:digit:]{4}&quot;)) %&gt;% 
+  dplyr::mutate(approx_age_at_death = as.numeric(full_year_of_death) - as.numeric(full_year_of_birth)) 
+
+my_wiki_query$full_year_of_birth &lt;- as.numeric(my_wiki_query$full_year_of_birth) 
+my_wiki_query$full_year_of_death &lt;- as.numeric(my_wiki_query$full_year_of_death)   
+my_wiki_query$simplified_sex &lt;- as_factor(my_wiki_query$simplified_sex)
+
+my_wiki_query %&lt;&gt;% mutate(decade_birth = full_year_of_birth %/% 10)
+my_wiki_query %&gt;% 
+  filter(full_year_of_birth &gt;= 1000 &amp; full_year_of_birth &lt; 2022) %&gt;% 
+  filter(simplified_sex == 1 | simplified_sex == 2) %&gt;% 
+  ggplot(aes(x = full_year_of_birth)) +
+  geom_histogram(binwidth = 10) +
+  scale_y_log10(breaks=c(100, 1000, 10000, 100000), labels = c(&quot;100&quot;, &quot;1000&quot;, &quot;10,000&quot;, &quot;100,000&quot;)) +
+  scale_x_continuous(breaks = seq(1000, 2021, 100)) +
+  theme_economist() + 
+  labs(title = &quot;Distribution of births per year&quot;,
+       x = &quot;Year&quot;,
+       y = &quot;Birth count per year&quot;,
+       subtitle = &quot;Years 1000 to 2021\nLog Scale Y-axis&quot;, 
+       caption = &quot;Including only records with birth years,\nand restricted to sex of either male or female.&quot;) +
+  coord_cartesian(ylim = c(100, 200000))
+male_color &lt;- &quot;#2E45B8&quot;
+female_color &lt;- &quot;#C91D42&quot;
+
+sex_proportion_plot &lt;- my_wiki_query %&gt;% 
+  filter(simplified_sex == 1 | simplified_sex == 2) %&gt;% 
+  filter(full_year_of_birth &gt;= 1000 &amp; full_year_of_birth &lt; 2021) %&gt;% 
+#  group_by(decade_birth) %&gt;% 
+  ggplot(aes(x = full_year_of_birth, fill = simplified_sex, color = simplified_sex)) +
+  geom_bar(position = &quot;fill&quot;) +
+  scale_fill_manual(labels = c(&quot;Female&quot;, &quot;Male&quot;), values = c(female_color, male_color)) +
+  scale_color_manual(labels = c(&quot;Female&quot;, &quot;Male&quot;), values = c(female_color, male_color)) +
+  labs(title = &quot;Proportion of men and women over time in birth cohorts&quot;, 
+       x = &quot;Year of birth&quot;,
+       y = &quot; &quot;, 
+       fill = &quot;Sex&quot;, 
+       color = NULL) +
+  geom_hline(yintercept = 0.5) +
+  theme_economist() +
+  scale_y_continuous(breaks=c(0, 0.25, .5, 0.75, 1), 
+                     labels = c(&quot; &quot;, &quot; &quot;, &quot;50%&quot;, &quot; &quot;, &quot; &quot;)) +
+  scale_x_continuous(breaks = seq(1000, 2021, 100)) +
+  guides(color = &quot;none&quot;)
+
+sex_proportion_plot
+ce_dates &lt;- my_wiki_query %&gt;% 
+  filter(full_year_of_birth &gt;= 1000 &amp; full_year_of_birth &lt;= 2021) %&gt;% 
+  filter(full_year_of_death &gt;= 1000 &amp; full_year_of_birth &lt;= 2021) %&gt;% 
+  mutate(date_of_birth = as_date(dob)) %&gt;%
+  mutate(year_birth = year(date_of_birth)) %&gt;%
+  mutate(month_birth = month(date_of_birth)) %&gt;%
+  mutate(day_birth = day(date_of_birth)) %&gt;%
+  mutate(date_of_death = as_date(dod)) %&gt;%
+  mutate(year_death = year(date_of_death)) %&gt;%
+  mutate(month_death = month(date_of_death)) %&gt;%
+  mutate(day_death = day(date_of_death)) %&gt;%
+  mutate(lifespan = as.duration(interval(date_of_birth, date_of_death))) %&gt;% 
+  filter(lifespan &lt; years(123)) %&gt;% 
+  filter(lifespan &gt;= years(0))
+average_lifespan_by_sex &lt;- ce_dates %&gt;% 
+  group_by(year_birth, simplified_sex) %&gt;% 
+  summarise(average_age = mean((lifespan)))
+
+average_lifespan &lt;- ce_dates %&gt;% 
+  group_by(year_birth) %&gt;% 
+  summarise(average_age = mean((lifespan)))
+
+plot_average_lifespan &lt;- average_lifespan %&gt;%  
+  ggplot(aes(x = year_birth, y = (average_age/31557600))) +
+  geom_smooth(color =   &quot;#F97A1F&quot;) +
+  geom_point(alpha = 0.05, color =  &quot;#F97A1F&quot;) +
+  labs(title = &quot;Average age of death over time&quot;,
+       x = &quot;Birth Year Cohort&quot;,
+       y = &quot;Age&quot;) 
+
+plot_average_lifespan + theme_economist() + scale_x_continuous(breaks = seq(1000, 2021, 100))
+
+average_lifespan_by_sex &lt;- ce_dates %&gt;% 
+  group_by(year_birth, simplified_sex) %&gt;% 
+  summarise(average_age = mean((lifespan)))
+
+plot_average_lifespan_by_sex &lt;- average_lifespan_by_sex %&gt;% 
+  filter(simplified_sex != 3) %&gt;% 
+  ggplot(aes(x = year_birth, y = (average_age/31557600), color = simplified_sex)) +
+  geom_smooth() +
+  geom_point(alpha = 0.05) +
+  scale_color_manual(labels = c(&quot;Female&quot;, &quot;Male&quot;), values = c(female_color, male_color)) +
+  labs(title = &quot;Average age of death over time by sex&quot;,
+       x = &quot;Birth Year Cohort&quot;,
+       y = &quot;Age&quot;, 
+       color = &quot;Sex&quot;) 
+
+plot_average_lifespan_by_sex + theme_economist() + scale_x_continuous(breaks = seq(1000, 2021, 100)) 
+average_lifespan_by_sex_dc &lt;- ce_dates %&gt;% 
+  group_by(year_death, simplified_sex) %&gt;% 
+  summarise(average_age = mean((lifespan)))
+
+average_lifespan_dc &lt;- ce_dates %&gt;% 
+  group_by(year_death) %&gt;% 
+  summarise(average_age = mean((lifespan)))
+
+plot_average_lifespan_dc &lt;- average_lifespan_dc %&gt;%  
+  ggplot(aes(x = year_death, y = (average_age/31557600))) +
+  geom_smooth(color =   &quot;#F97A1F&quot;) +
+  geom_point(alpha = 0.05, color =  &quot;#F97A1F&quot;) +
+  labs(title = &quot;Average age of death over time&quot;,
+       x = &quot;Death Year Cohort&quot;,
+       y = &quot;Age&quot;) 
+
+plot_average_lifespan_dc  + theme_economist() + scale_x_continuous(breaks = seq(1000, 2021, 100))
+
+plot_average_lifespan_by_sex_dc &lt;- average_lifespan_by_sex_dc %&gt;% 
+  filter(simplified_sex != 3) %&gt;% 
+  ggplot(aes(x = year_death, y = (average_age/31557600), color = simplified_sex)) +
+  geom_smooth() +
+  geom_point(alpha = 0.05) +
+  scale_color_manual(labels = c(&quot;Female&quot;, &quot;Male&quot;), values = c(female_color, male_color)) +
+  labs(title = &quot;Average age of death over time by sex&quot;,
+       x = &quot;Death Year Cohort&quot;,
+       y = &quot;Age&quot;, 
+       color = &quot;Sex&quot;) 
+
+plot_average_lifespan_by_sex_dc + theme_economist() + scale_x_continuous(breaks = seq(1000, 2021, 100))
+average_lifespan_dc_20 &lt;- ce_dates %&gt;% 
+  filter(lifespan &gt; 630720000) %&gt;% 
+  group_by(year_death) %&gt;% 
+  summarise(average_age = mean((lifespan)))
+
+plot_average_lifespan_dc_20 &lt;- average_lifespan_dc_20  %&gt;%  
+  ggplot(aes(x = year_death, y = (average_age/31557600))) +
+  geom_smooth(color =   &quot;#F97A1F&quot;) +
+  geom_point(alpha = 0.05, color =  &quot;#F97A1F&quot;) +
+  labs(title = &quot;Average age of death over time&quot;,
+       subtitle = &quot;Only lifespans greater than 20 years&quot;,
+       x = &quot;Death Year Cohort&quot;,
+       y = &quot;Age&quot;) 
+
+plot_average_lifespan_dc_20 + theme_economist() + scale_x_continuous(breaks = seq(1000, 2021, 100))
+plot_average_lifespan_dc &lt;- average_lifespan_dc %&gt;%  
+  filter(year_death &gt;= 1600) %&gt;% 
+  ggplot(aes(x = year_death, y = (average_age/31557600))) +
+  geom_smooth(color =   &quot;#F97A1F&quot;) +
+  geom_point(alpha = 0.05, color =  &quot;#F97A1F&quot;) +
+  labs(title = &quot;Average age of death over time&quot;,
+       x = &quot;Death Year Cohort&quot;,
+       y = &quot;Age&quot;) 
+
+plot_average_lifespan_dc + 
+  theme_economist() + 
+  scale_x_continuous(breaks = seq(1000, 2021, 100)) + 
+    coord_cartesian(ylim = c(40, 90))
+
+plot_average_lifespan_by_sex_dc &lt;- average_lifespan_by_sex_dc %&gt;% 
+  filter(year_death &gt;= 1600) %&gt;% 
+  filter(simplified_sex != 3) %&gt;% 
+  ggplot(aes(x = year_death, y = (average_age/31557600), color = simplified_sex)) +
+  geom_smooth() +
+  geom_point(alpha = 0.05) +
+  scale_color_manual(labels = c(&quot;Female&quot;, &quot;Male&quot;), values = c(female_color, male_color)) +
+  labs(title = &quot;Average age of death over time&quot;,
+       x = &quot;Death Year Cohort&quot;,
+       y = &quot;Age&quot;, 
+       color = &quot;Sex&quot;) +
+  guides(color = &quot;none&quot;)
+
+plot_average_lifespan_by_sex_dc + 
+  theme_economist() + 
+  scale_x_continuous(breaks = seq(1000, 2021, 100)) + 
+  coord_cartesian(ylim = c(40, 90))
+year_cutoff &lt;- 1800
+
+plot_average_lifespan_dc &lt;- average_lifespan_dc %&gt;%  
+  filter(year_death &gt;= year_cutoff) %&gt;% 
+  ggplot(aes(x = year_death, y = (average_age/31557600))) +
+  geom_line(color =     &quot;#F97A1F&quot;) +
+ # geom_point(alpha = 0.05, color =     &quot;#F97A1F&quot;) +
+  labs(title = &quot;Average age of death over time&quot;,
+       x = &quot;Death Year Cohort&quot;,
+       y = &quot;Age&quot;) 
+
+plot_average_lifespan_dc + 
+  theme_economist() + 
+  scale_x_continuous(breaks = seq(1000, 2021, 100)) + 
+    coord_cartesian(ylim = c(40, 90))
+
+plot_average_lifespan_by_sex_dc &lt;- average_lifespan_by_sex_dc %&gt;% 
+  filter(year_death &gt;= year_cutoff) %&gt;% 
+  filter(simplified_sex != 3) %&gt;% 
+  ggplot(aes(x = year_death, y = (average_age/31557600), color = simplified_sex)) +
+  geom_line() +
+  scale_color_manual(labels = c(&quot;Female&quot;, &quot;Male&quot;), values = c(female_color, male_color)) +
+  labs(title = &quot;Average age of death over time by sex&quot;,
+       x = &quot;Death Year Cohort&quot;,
+       y = &quot;Age&quot;, 
+       color = &quot;Sex&quot;) +
+  guides(color = &quot;none&quot;)
+
+plot_average_lifespan_by_sex_dc + 
+  theme_economist() + 
+  scale_x_continuous(breaks = seq(1000, 2021, 100)) + 
+  coord_cartesian(ylim = c(40, 90))
+heatmap_dates &lt;- ce_dates %&gt;% 
+  mutate(pad_month_birth = str_pad(month_birth, width = 2, side = &quot;left&quot;, pad = 0)) %&gt;% 
+  mutate(pad_day_birth = str_pad(day_birth, width = 2, side = &quot;left&quot;, pad = 0)) %&gt;% 
+  unite(&quot;heatdate&quot;, c(year_birth, pad_month_birth, pad_day_birth), sep = &quot;-&quot;, remove = FALSE) %&gt;% 
+  mutate(doy = lubridate::yday(as_date(heatdate)))
+
+heatmap_dates_subset &lt;- heatmap_dates %&gt;% dplyr::select(year_birth, heatdate, doy)
+
+heatmap_data &lt;- heatmap_dates_subset %&gt;% 
+  group_by(year_birth, doy) %&gt;% 
+  summarise(count = n()) %&gt;% 
+  ungroup() %&gt;% 
+  group_by(year_birth) %&gt;% 
+  mutate(year_total = sum(count)) %&gt;% 
+  mutate(proportion_year = count/year_total) %&gt;% 
+  mutate(too_high = case_when(
+    proportion_year &gt; 0.003 ~ 1, #roughly 10% higher than expected
+    TRUE ~ 0
+  ))
+
+
+too_many_births_plot &lt;- heatmap_data  %&gt;% 
+  filter(year_birth &gt;= 1500) %&gt;% 
+  ggplot(aes(x = year_birth, y = doy, fill = too_high, text = )) + 
+  geom_tile() +
+  scale_fill_gradient(low = &quot;#475ED1&quot;, high = &quot;#F9C31F&quot;) + # mid 
+  theme_economist() +
+  theme(legend.position = &quot;none&quot;) +
+  labs(x = &quot;Year&quot;, 
+       y = &quot; &quot;, 
+       title = &quot;Days of the year with more than expected birthdates&quot;,
+       subtitle = &quot;Yellow represents with \&quot;too\&quot; many births \nY-axis is the day of the year with tick marks to show the start of the month&quot;) +
+  scale_y_continuous(breaks=c(1, 32, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335),
+                     labels = c(&quot;J&quot;, &quot;F&quot;, &quot;M&quot;, &quot;A&quot;, &quot;M&quot;, &quot;J&quot;, &quot;J&quot;, &quot;A&quot;, &quot;S&quot;, &quot;O&quot;, &quot;N&quot;, &quot;D&quot;))
+
+too_many_births_plot
+too_many_births_plot &lt;- heatmap_data  %&gt;% 
+  filter(doy &lt; 31) %&gt;% 
+  ggplot(aes(x = year_birth, y = doy, fill = too_high, text = )) + 
+  geom_tile() +
+  scale_fill_gradient(low = &quot;#475ED1&quot;, high = &quot;#F9C31F&quot;) + # mid 
+  theme_economist() +
+  theme(legend.position = &quot;none&quot;) +
+  labs(x = &quot;Year&quot;, 
+       y = &quot; &quot;, 
+       title = &quot;Days of the year with more than expected birthdates&quot;,
+       subtitle = &quot;Yellow represents with \&quot;too\&quot; many births \nY-axis is the day of the year with tick marks to show the start of the month&quot;) +
+  scale_y_continuous(breaks=c(1, 32, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335),
+                     labels = c(&quot;J&quot;, &quot;F&quot;, &quot;M&quot;, &quot;A&quot;, &quot;M&quot;, &quot;J&quot;, &quot;J&quot;, &quot;A&quot;, &quot;S&quot;, &quot;O&quot;, &quot;N&quot;, &quot;D&quot;))
+
+too_many_births_plot
+
+sessionInfo()</code></pre>
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>## R version 4.1.1 (2021-08-10)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 19043)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United States.1252 
+## [2] LC_CTYPE=English_United States.1252   
+## [3] LC_MONETARY=English_United States.1252
+## [4] LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.1252    
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] ggthemes_4.2.4              scales_1.1.1               
+##  [3] DT_0.19                     plotly_4.9.4.1             
+##  [5] magrittr_2.0.1              lubridate_1.7.10           
+##  [7] WikidataQueryServiceR_1.0.0 forcats_0.5.1              
+##  [9] stringr_1.4.0               dplyr_1.0.7                
+## [11] purrr_0.3.4                 readr_2.0.1                
+## [13] tidyr_1.1.3                 tibble_3.1.4               
+## [15] ggplot2_3.3.5               tidyverse_1.3.1            
+## 
+## loaded via a namespace (and not attached):
+##  [1] httr_1.4.2        sass_0.4.0        jsonlite_1.7.2    viridisLite_0.4.0
+##  [5] splines_4.1.1     modelr_0.1.8      bslib_0.3.0       assertthat_0.2.1 
+##  [9] highr_0.9         cellranger_1.1.0  yaml_2.2.1        pillar_1.6.2     
+## [13] backports_1.2.1   lattice_0.20-44   glue_1.4.2        digest_0.6.27    
+## [17] rvest_1.0.1       colorspace_2.0-2  htmltools_0.5.2   Matrix_1.3-4     
+## [21] pkgconfig_2.0.3   broom_0.7.9       haven_2.4.3       bookdown_0.24    
+## [25] ratelimitr_0.4.1  tzdb_0.1.2        mgcv_1.8-36       generics_0.1.0   
+## [29] farver_2.1.0      ellipsis_0.3.2    withr_2.4.2       lazyeval_0.2.2   
+## [33] cli_3.0.1         crayon_1.4.1      readxl_1.3.1      evaluate_0.14    
+## [37] fs_1.5.0          fansi_0.5.0       nlme_3.1-152      xml2_1.3.2       
+## [41] blogdown_1.5      tools_4.1.1       data.table_1.14.0 hms_1.1.0        
+## [45] lifecycle_1.0.0   munsell_0.5.0     reprex_2.0.1      compiler_4.1.1   
+## [49] jquerylib_0.1.4   rlang_0.4.11      grid_4.1.1        rstudioapi_0.13  
+## [53] htmlwidgets_1.5.3 labeling_0.4.2    rmarkdown_2.10    gtable_0.3.0     
+## [57] DBI_1.1.1         R6_2.5.1          knitr_1.33        fastmap_1.1.0    
+## [61] utf8_1.2.2        stringi_1.7.4     Rcpp_1.0.7        vctrs_0.3.8      
+## [65] dbplyr_2.1.1      tidyselect_1.1.1  xfun_0.25</code></pre>
+</div>

@@ -1,0 +1,233 @@
+# What do to do with missing data
+
+I know missing data is big headache for a lot of folks, and I don't want to trivialize the issue, so this is me acknowledging this is not how one should solve the following problem, but it **is** how I will deal with it today. There are tons of people without birth and death dates, so I am going to throw the baby out with the bath water and only keep entries for folks with a birth and death dates.
+
+```{r eliminate-nas}
+
+processed_data <- my_wiki_query %>% 
+  drop_na(dob) %>% 
+  drop_na(dod)
+
+my_wiki_query %>% group_by(item) %>% summarise(count = n())
+```
+
+This roughly halves the data with number of entries in the original data being `r nrow(my_wiki_query)` now to `r nrow(processed_data)`. I imagines one of the most remarkable effects on the data will be how this affects the data born in the 20th and 21st centuries because people who are living currently will not be in the data and people who have died young at the end of the dataset will be overrepresented compared to prior birth cohorts who have had enough time to grow old and die. I bet there are epidemiology people who make a career out of understanding that issue and it's effects on data.
+
+# Dates, never easy
+
+Currently there's not a super easy way to deal with BC dates in R (which I am using for this analysis) so I am restricting my analysis to people who have AD birth dates. 
+
+
+# Negative life
+
+```{r positive}
+positive_lifespan <- ce_dates %>% filter(lifespan >= 0)
+
+ce_dates  %<>% filter(lifespan >= 0 | is.na(lifespan)) 
+```
+
+So the data contains some negative lifespans. I took a peek at [one of the entries](https://www.wikidata.org/wiki/Q81098) and found a fun little wrench in all my pretty data. Some folks have dates of birth and death recorded as things like _18th century_ so when trying to do different calculations you get a negative number. I'll slice these folks out, which removes `r nrows(ce_dates) - nrows(positive_lifespan)` entries. 
+
+# Finally a plot, bad
+
+So here's the first plot
+
+```{r}
+plot <- positive_lifespan %>% 
+  ggplot(aes(x = ymd(date_of_birth), y = (lifespan/31556952))) +
+  geom_point() +
+  scale_x_date() +
+  labs(x = "Date of Birth", y = "Life in Years")
+
+plot
+```
+As I predicted there is some really stark blunting of lifespan at the end of the dataset.
+
+There are also some folks with really long lives...let's take a look at this [Methuselahian](https://en.wikipedia.org/wiki/Methuselah) cohort. 
+
+```{r}
+too_long_life <- positive_lifespan %>% filter(lifespan > years(120))
+
+test <- top_n(too_long_life, 10) 
+
+test$url <- paste0("<a href='",test$item,"'>",test$item,"</a>")
+
+test %>% 
+  select(lifespan, url, date_of_birth, date_of_death) %>% 
+  DT::datatable(escape = FALSE)
+```
+
+This too looks like some issues with a birth or death date of something like _21st century_ or just some likely wrong values. I'm gonna exclude anyone older than 122 which is the oldest verified person ([which is not without controversy](https://en.wikipedia.org/wiki/Jeanne_Calment#Skepticism_regarding_age)) but is fine enough for this rough project. 
+
+```{r}
+ce_data_histogram <- ce_dates %>% 
+  group_by(year_birth) %>% 
+  ggplot(aes(x = year_birth)) +
+  geom_histogram(binwidth = 10) +
+  scale_y_log10() +
+  theme_economist()
+
+ce_data_histogram 
+```
+
+```{r}
+upper_bound_life <- positive_lifespan %>% filter(lifespan < years(123))
+```
+
+```{r}
+plot_2 <- upper_bound_life %>% 
+  ggplot(aes(x = ymd(date_of_birth), y = (lifespan/31556952))) +
+  geom_point(alpha = 0.05) +
+  scale_x_date() +
+  labs(x = "Date of Birth", y = "Life in Years")
+
+plot_2
+```
+
+```{r}
+average_ages_by_birth_year <- upper_bound_life %>% 
+  dplyr::group_by(year_birth) %>% 
+  dplyr::summarise(mean_death_age = mean(lifespan), birth_cohort_size = n(), sd_lifespan = sd(lifespan))
+
+
+plot_average_ages_by_birth_year <- ggplot(average_ages_by_birth_year, aes(x = year_birth, y = mean_death_age)) +
+  geom_smooth()
+
+plot_average_ages_by_birth_year
+
+
+```
+That is a hilariously overplotted graph. What I really want to know is how the average age changed over time, so I'm gonna group the data by birth year, get average lifespan and plot that. Males and females have different average life expectenacies so would like to look at that too in the data. I also know that there is likely to be a big difference in who gets a Wikipedia page and is likely to have more men compared to women, so that will be interesting to see that graphed out too!
+
+Again going for some super simple analysis here. There are entries that have sex or gender not as male or female, but the numbers for each category are fairly small, so I'm going to do a split of female, male, and group everything not those two in one category. 
+
+
+
+
+
+
+```{r average_age}
+average_lifespan <- upper_bound_life %>% 
+  group_by(year_birth, simplified_sex) %>% 
+  summarise(average_age = mean((lifespan)))
+```
+
+```{r average_plot}
+time_breaks <- seq(0,2100, by = 100)
+plot_average <- average_lifespan %>%
+  ggplot(aes(x = year_birth, y = average_age/31556952)) +
+  geom_smooth() +
+  labs(x = "Year of birth", y = "Average lifespan (years) for birth year cohort") +
+  scale_x_continuous(breaks = c(time_breaks)) +
+  facet_wrap(simplified_sex ~ .)
+
+plot_average
+```
+
+Lots of issues with big outliers for not so clean data. Looks like tons of folks are listed as having years of birth that line up with round years like 1700. Let's just look at folks born on or after 1800.
+
+
+
+```{r on_or_after_1800}
+plot_average_post1800 <- average_lifespan %>%
+  filter(year_birth >= 1800) %>% 
+  ggplot(aes(x = year_birth, y = average_age/31556952)) +
+  geom_line() +
+  labs(x = "Year of birth", y = "Average lifespan (years) for birth year cohort") 
+
+plot_average_post1800
+```
+
+# Distribution of years, months, days
+
+Let's create a variable to that captures the century of birth (eg if born in 1893, will be 18)
+```{r}
+upper_bound_life %<>% 
+  mutate(year_4_digits = str_pad(year_birth, width = 4, pad = 0)) %>% 
+  mutate(century = str_sub(year_4_digits, 1, 2)) %>% 
+  group_by(century) %>% 
+  mutate(mean_by_century = (mean(lifespan))) %>% 
+  ungroup()
+  
+```
+
+```{r}
+death_year <-
+  upper_bound_life %>% 
+  dplyr::group_by(year_death) %>% 
+  dplyr::summarise(count = n()) %>% 
+  dplyr::ungroup()
+```
+
+
+```{r}
+death_year_summary <-
+  upper_bound_life %>% 
+  group_by(year_death) %>% 
+  dplyr::summarise(death_count = n()) 
+
+birth_year_summary <-
+  upper_bound_life %>% 
+  group_by(year_birth) %>% 
+  dplyr::summarise(birth_count = n()) 
+
+deaths_per_year_plot <- death_year_summary %>% 
+  filter(year_death >= 1600 ) %>% 
+  ggplot(aes(x = year_death, y = death_count)) + 
+  geom_line() +
+  labs(title = "Deaths per year since 1600", x = "Year", y = "Death Count")
+
+ggplotly(deaths_per_year_plot)
+
+
+
+births_per_year_plot <- birth_year_summary %>% 
+  filter(year_birth >= 1600 ) %>% 
+  ggplot(aes(x = year_birth, y = birth_count)) + 
+  geom_line() +
+  labs(title = "Births per year since 1600 for entries of deceased people", x = "Year", y = "Birth Count")
+
+ggplotly(births_per_year_plot)
+```
+
+Remember the above data **only** contains folks who have known birth and death dates, so for the latter half of the 20th century and beginning of the 21st, there are very few counts. 
+
+
+
+
+```{r}
+
+distribution_months_death <- ggplot(upper_bound_life, aes(x = month(month_death, label = TRUE))) + 
+  geom_bar() + 
+  ggtitle("Distribution of Deaths Among Months") +
+  labs(x = "Month of Death", y = "Number of Deaths") 
+
+distribution_months_death
+```
+
+```{r}
+distribution_days_death <- ggplot(upper_bound_life, aes(x = lubridate::day(date_of_death))) + 
+  geom_bar() + 
+  ggtitle("Distribution of Deaths Among Days") +
+  labs(x = "Day of Death", y = "Number of Deaths") 
+
+distribution_days_death
+```
+```{r}
+distribution_days_birth <- ggplot(upper_bound_life, aes(x = lubridate::day(date_of_birth))) + 
+  geom_bar() + 
+  ggtitle("Distribution of Births Among Days") +
+  labs(x = "Day of Births", y = "Number of Births") 
+
+distribution_days_birth
+```
+```{r}
+distribution_wdays_birth <- ggplot(upper_bound_life, aes(x = lubridate::wday(date_of_birth, label = TRUE))) + 
+  geom_bar() + 
+  ggtitle("Distribution of Births Among Days of the Week") +
+  labs(x = "Day of Births", y = "Number of Births") 
+
+distribution_wdays_birth
+```
+
+I thought that day of week would be interesting, but upon reflection given that the first day of the month is hugely overweighted in the data and that the first day of the month is *probably* evenly distributed among the days of the week, it propbably obscures anything else in the data.

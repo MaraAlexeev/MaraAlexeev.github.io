@@ -12,6 +12,30 @@
     
     
     <item>
+      <title>Today? Alt responses to give the God of Death</title>
+      <link>/2021/11/08/t/</link>
+      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/11/08/t/</guid>
+      <description>“There is only one god and his name is death. And there is only one thing we say to death: Not today.”
+― Syrio Forel (Game of Thrones S1:Ep6: A golden crown)
+While Game of Thrones fans are fond of refusing the God of Death, Wikipedia has lots of data about people who did say: Ok, today is the day.
+InspirationIn July 2020, my husband presented me with two tweets about change of the average age of death over time (tweet 1 and tweet 2) and challenged me to make some cooler graphs.</description>
+    </item>
+    
+    <item>
+      <title>Age of Death Over Time from Wikipedia</title>
+      <link>/2021/06/07/age-of-death-over-time-from-wikipedia/</link>
+      <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/06/07/age-of-death-over-time-from-wikipedia/</guid>
+      <description>library(tidyverse)library(WikidataQueryServiceR)library(lubridate)library(stringr)So last summer (it’s been a busy year) my husband showed me a tweet and challenged me to make some cool graphs.
+The inciting posts were these:
+Of people with Wikipedia articles, average age at death of people who died in a given year.
+[Slightly smoothed; incomplete dataset (~50k deaths); only including deaths age &amp;gt;= 20. I previously tweeted a version with x = year of birth, but decline in recent cohorts was confusing.</description>
+    </item>
+    
+    <item>
       <title>Running My First R Workshop</title>
       <link>/2021/05/25/running-my-first-r-workshop/</link>
       <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
