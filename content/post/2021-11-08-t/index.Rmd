@@ -76,7 +76,7 @@ count_query <- nrow(my_wiki_query)
 
 With this short command, I was able to quite effortlessly pull data on `r count_query` records. 
 
-As I started out learning R and playing with data, I knew nothing about querying publicly available sources of data. Being able to pull over 3 million rows of data for a toy projects is an amazing feat! 
+As I started out learning R and playing with data, I knew nothing about querying publicly available sources of data. Being able to pull over 3 million rows of data for a toy project is an amazing feat! 
 
 If you are just starting out in learning R or want to find some great pre-cleaned datasets to work with, check out [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) and follow people's work on twitter using the [#TidyTuesday hashtag](https://twitter.com/hashtag/TidyTuesday?src=hashtag_click). 
 
