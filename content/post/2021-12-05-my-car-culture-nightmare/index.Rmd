@@ -1,0 +1,19 @@
+---
+title: My car culture nightmare
+author: Mara Alexeev
+date: '2021-12-05'
+slug: my-car-culture-nightmare
+categories: []
+tags: []
+---
+
+# Big parenting fears
+
+One of my biggest fears as a parent is the threat of cars to the well-being of my children. And unlike other lurking parenting fears, this one is upsetting because it is a fairly rational fear based on the causes of death and injury to children in and out of vehicles.
+
+I hope to learn a bit more about how my own community could make streets safer and better for folks, so putting this here as a promise to myself.
+
+```{r, echo=FALSE, fig.cap="Nightmare interaction of pedestrian areas and cars."}
+knitr::include_graphics("~/All_of_Maras_R/website/MaraAlexeev.github.io/content/post/2021-12-05-my-car-culture-nightmare/images/busy_car.png")
+```
+
