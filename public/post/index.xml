@@ -6,10 +6,16 @@
     <description>Recent content in Posts on Mara&#39;s Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Nov 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My car culture nightmare</title>
+      <link>/2021/12/05/my-car-culture-nightmare/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/12/05/my-car-culture-nightmare/</guid>
+      <description>Big parenting fearsOne of my biggest fears as a parent is the threat of cars to the well-being of my children. And unlike other lurking parenting fears, this one is upsetting because it is a fairly rational fear based on the causes of death and injury to children in and out of vehicles.
+I hope to learn a bit more about how my own community could make streets safer and better for folks, so</description>
+    </item>
     
     <item>
       <title>Today? Alt responses to give the God of Death</title>
@@ -19,7 +25,7 @@
       <guid>/2021/11/08/t/</guid>
       <description>“There is only one god and his name is death. And there is only one thing we say to death: Not today.”
 ― Syrio Forel (Game of Thrones S1:Ep6: A golden crown)
-While Game of Thrones fans are fond of refusing the God of Death, Wikipedia has lots of data about people who did say: Ok, today is the day.
+While Game of Thrones fans are fond of refusing the God of Death, Wikipedia has lots of data about people who did say: Ok, today is the day.
 InspirationIn July 2020, my husband presented me with two tweets about change of the average age of death over time (tweet 1 and tweet 2) and challenged me to make some cooler graphs.</description>
     </item>
     
@@ -39,8 +45,8 @@ All the materials can be found here. Note the RStudio Cloud workspace has been t
       <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>/2021/04/15/embeding-shiny-apps-in-a-post/</guid>
-      <description>Bringing some Shiny to my blogI’m in a data viz class this semester, so I’m taking the opportunity to figure out how to bring my Shiny apps to my website.
-Problem 1Problem 2</description>
+      <description>Bringing some Shiny to my blogI’m in a data viz class this semester, so I’m taking the opportunity to figure out how to bring my Shiny apps to my website.
+Problem 1Problem 2</description>
     </item>
     
     <item>
@@ -63,7 +69,7 @@ library(tidyverse)library(googlesheets4)library(kableExtra)data &amp;lt;- goo
       <guid>/2021/01/07/less-safe-and-more-worry/</guid>
       <description>Clinical Thinking is Hard It&amp;rsquo;s hard to make decisions. It&amp;rsquo;s really hard to make good decisions. Sometimes I&amp;rsquo;m not even sure what good means. And it certainly means different things to different people during a clinical encounter.
 I have said for years, but don&amp;rsquo;t think I have written down one of my little phrases I think about a lot in pediatrics:
- Sometimes &amp;ldquo;better safe than sorry&amp;rdquo; is less safe and more worry.</description>
+Sometimes &amp;ldquo;better safe than sorry&amp;rdquo; is less safe and more worry.</description>
     </item>
     
     <item>
@@ -206,9 +212,10 @@ I wanted to start making blogging from within RStudio Cloud easy. I use a Chrome
       <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/09/13/trying-out-new-things-in-r-markdown/</guid>
-      <description>Make a table in RmarkdownColumn 1 left justifyColumn 2 centeredColumne 3 right justifiedABCHoly cow, that worked on the first try!
-Pets not LivestockAlison Horst advised us that if our figures are more like pets than livestock, we should name them!!!
-Here’s my attempt to name some figures and link them throughout the document.</description>
+      <description>Make a table in RmarkdownColumn 1 left justifyColumn 2 centeredColumne 3 right justifiedABCHoly cow, that worked on the first try!
+Pets not LivestockAlison Horst advised us that if our figures are more like pets than livestock, we should name them!!!
+Here’s my attempt to name some figures and link them throughout the document.
+library(tidyverse)## ── Attaching packages ─────────────────────────────── tidyverse 1.2.1 ──## ✔ ggplot2 3.</description>
     </item>
     
     <item>
@@ -218,7 +225,7 @@ Here’s my attempt to name some figures and link them throughout the document.<
       
       <guid>/2019/09/12/r-medicine-conference-day-1/</guid>
       <description>R Markdown for MedicineAttended a workshop by Alison Hill. Here are some of my notes to future self to play with later.
-Figure Labelling autodistill packagehtml_document2 yaml outputxaringanposterdownstargazertable makingdifferent themes (berlin, roma)project managementflexdashboardredocspellingwordcountaddinhtmlwidgets for RleafletgitlabDataTablesrevealjsFigure out how to…Bookdown: how to combine multiple .Rmd into a “book”Make a powerpoint presenation from Rmarkdown (my work is heavy in ppt)Best practicesProjectUse here packageHave a folder for figures to print to and saveResourceshttps://commonmark.</description>
+Figure Labelling autodistill packagehtml_document2 yaml outputxaringanposterdownstargazertable makingdifferent themes (berlin, roma)project managementflexdashboardredocspellingwordcountaddinhtmlwidgets for RleafletgitlabDataTablesrevealjsFigure out how to…Bookdown: how to combine multiple .Rmd into a “book”Make a powerpoint presenation from Rmarkdown (my work is heavy in ppt)Best practicesProjectUse here packageHave a folder for figures to print to and saveResourceshttps://commonmark.</description>
     </item>
     
     <item>
@@ -237,7 +244,7 @@ Figure Labelling autodistill packagehtml_document2 yaml outputxaringanposter
       
       <guid>/2019/08/31/the-first-post/</guid>
       <description>This is my first post on my new website built with the R package blogdown, the help of many online help pages, and my lovely husband. I am using Github and Netlify as well. I don’t have the energy to write a post about how I built this, but here is the list of things that caused pain:
-in my config.toml file I had replaced the baseurl default of baseurl = &#34;</description>
+in my config.toml file I had replaced the baseurl default of baseurl = &#34;</description>
     </item>
     
   </channel>
