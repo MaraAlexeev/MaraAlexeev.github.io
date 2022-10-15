@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Who am I?My name is Mara Alexeev. I currently live in Jersey City, New Jersey, but I grew up on a farm in central Iowa. In fourth grade I was in love with space and wanted to be a part time astronaut and part time farmer.
+In the summer of 2022, I a finished a masters in Biomedical Informatics at Harvard Medical School and a fellowship in Clinical Informatics at Boston Children’s Hospital.</description>
+    </item>
+    
+    <item>
       <title>My car culture nightmare</title>
       <link>/2021/12/05/my-car-culture-nightmare/</link>
       <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
@@ -94,17 +104,6 @@ Last updated on January 07, 2021</description>
       
       <guid>/2020/11/17/my-motto/</guid>
       <description>My life so far in Clinical Informatics I&amp;rsquo;m attending the AMIA 2020 Virtual Conference this week. Lots of excellent talks. However, I wanted to put it out there for myself and my future self that my motto for my work is: the best care should be the easiest care to provide.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Who am I?My name is Mara Alexeev. I currently live in Brookline, Massachusetts, but I grew up on a farm in central Iowa. In fourth grade I was in love with space and wanted to be a part time astronaut and part time farmer.
-Currently, I am the doing a fellowship in Clinical Informatics at Boston Children’s Hospital.
-I love learning human and computer languages. I’ve had a long love affair with Russian and German, and recently became interested in American Sign Language (and also the Russian Manual Alphabet!</description>
     </item>
     
     <item>
