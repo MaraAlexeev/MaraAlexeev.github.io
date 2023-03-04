@@ -6,7 +6,26 @@
     <description>Recent content on Mara&#39;s Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A sticky bun, but not every day</title>
+      <link>/2023/02/26/a-sticky-bun-but-not-every-day/</link>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/2023/02/26/a-sticky-bun-but-not-every-day/</guid>
+      <description>In the summer of 2020 we moved to Brookline, MA. Our routine immediately developed that we would do daycare drop off and then stop by Temptations Cafe (Hi Nassib!!) We particularly enjoyed their sticky buns, but it took us about 128 trips to the cafe to understand the pattern of when sticky buns were available or not. Here I have made a github style waffle plot, that I believe makes the pattern of when sticky buns are available clearer.</description>
+    </item>
+    
+    <item>
+      <title>Cod Liver in Nine Acts</title>
+      <link>/2022/11/12/cod-liver-in-nine-acts/</link>
+      <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/2022/11/12/cod-liver-in-nine-acts/</guid>
+      <description>Family visited recently and left us with nine cans of Icelandic Cod Liver. Why nine you ask? Well they had a box of twelve sent ahead of their vist and ate three of them while staying with us.
+knitr::include_graphics(&amp;quot;./images/PXL_20221111_002014410.jpg&amp;quot;)I texted a picture of my undeserved hepatic lode of Northern Atlantic goodness to med school friends and promised culinary updates in my pursuit of full turn over of the cupboard inventory.</description>
+    </item>
+    
     <item>
       <title>A book report, partially forgotten: The Prize</title>
       <link>/2022/10/30/a-book-report-partially-forgotten-the-prize/</link>
