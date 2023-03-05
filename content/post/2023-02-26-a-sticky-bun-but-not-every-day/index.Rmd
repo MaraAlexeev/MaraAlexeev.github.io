@@ -7,7 +7,9 @@ categories: []
 tags: []
 ---
 
-In the summer of 2020 we moved to Brookline, MA. Our routine immediately developed that we would do daycare drop off and then stop by Temptations Cafe (Hi Nassib!!) We particularly enjoyed their sticky buns, but it took us about 128 trips to the cafe to understand the pattern of when sticky buns were available or not. Here I have made a github style waffle plot, that I believe makes the pattern of when sticky buns are available clearer. We finally noticed what the pattern was in October, when the days sticky buns were available increased.
+In the summer of 2020 we moved to Brookline, MA. Our routine immediately developed that we would do daycare drop off and then stop by Temptations Cafe (Hi Nassib!!) We particularly enjoyed their sticky buns, but it took us about 128 trips to the cafe to understand the pattern of when sticky buns were available or not. 
+
+Here I have made a github style waffle plot, that I believe makes the pattern of when sticky buns are available clearer. We finally noticed what the pattern was in October, when the days sticky buns were available increased.
 
 ```{r include = FALSE}
 knitr::opts_chunk$set(echo=FALSE)
@@ -40,7 +42,6 @@ sticky_bun$sticky_bun <- as.integer(sticky_bun$sticky_bun)
 gh_waffle <- function(data, pal = "D", dir = -1) {
   p <- ggplot(data, aes(x = week, y = name_dow, fill = sticky_bun)) +
    
-    
      scale_fill_viridis_c(
       name = "Sticky buns",
       option = pal, # Variable color palette
@@ -82,7 +83,7 @@ gh_waffle <- function(data, pal = "D", dir = -1) {
 
 ```{r}
 gh_waffle(sticky_bun) + 
-#  guides(fill="none") + 
+  guides(fill="none") + 
   labs(title = "Sticky Bun Purchases by Day of the Week")
 
 #improvements desired
