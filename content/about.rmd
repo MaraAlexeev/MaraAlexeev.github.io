@@ -35,7 +35,7 @@ Interested in connecting or collaborating? Send me a message!
   <button type="submit">Send Mara a Nice Message</button>
 </form>
 
-![](./content/MaraAtTheTandy.jpg){width=75% height=75%}
+![](./MaraAtTheTandy.jpg){width=75% height=75%}
 
 
 >I can run this computer, Dad.
