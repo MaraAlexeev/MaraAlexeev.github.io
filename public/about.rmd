@@ -8,7 +8,7 @@ date: '2022-10-15'
 
 My name is Mara Alexeev. I currently live in Jersey City, New Jersey, but I grew up on a farm in central Iowa. In fourth grade I was in love with space and wanted to be a part time astronaut and part time farmer.
 
-In the summer of 2022, I a finished a masters in Biomedical Informatics at Harvard Medical School and a fellowship in Clinical Informatics at Boston Children's Hospital. 
+In the summer of 2022, I finished a masters in Biomedical Informatics at Harvard Medical School and a fellowship in Clinical Informatics at Boston Children's Hospital. 
 
 Currently, I am the Director of Clinical Informatics at a health tech start up called Dandelion Health.
 
