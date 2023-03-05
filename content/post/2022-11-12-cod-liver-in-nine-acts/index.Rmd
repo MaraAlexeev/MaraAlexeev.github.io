@@ -10,7 +10,7 @@ tags:
 
 Family visited recently and left us with nine cans of Icelandic Cod Liver. Why nine you ask? Well they had a box of twelve sent ahead of their visit and ate three of them while staying with us.
 
-```{r, echo=FALSE, out.width="50%"}
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
 knitr::include_graphics("./images/PXL_20221111_002014410.jpg")
 ```
 
@@ -24,7 +24,7 @@ The process of getting these fish livers to me in tidy little tins is probably w
 
 I opened the can up and it reminded me of cat food. Cat food I would be happy to feed to my hypothetical cat, but cat food nonetheless.
 
-```{r, echo=FALSE, out.width="50%"}
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
 knitr::include_graphics("./images/PXL_20221112_212407111.jpg")
 ```
 
@@ -42,14 +42,14 @@ The first recipe was just the product of reviewing a few Google hits and synthes
 
 Top toast with mashed cod liver. Add a slice of egg and top with chives. Enjoy!
 
-```{r, echo=FALSE, out.width="50%"}
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
 knitr::include_graphics("./images/PXL_20221112_222124818.PORTRAIT.jpg")
 ```
 
 
 Review -- Totally fine! Good even. And looked fancy. I think a high end butter would elevate it. I happened to have a fresh loaf of sourdough bread at home, and that was a very nice combo. Would consider serving this at a party like a Russian style New Year's Eve party with lots of small appetizers. Probably would not eat a ton of these, but certainly an interesting dish with good texture.
 
-```{r, echo=FALSE, out.width="50%"}
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
 knitr::include_graphics("./images/PXL_20221112_214240621.jpg")
 ```
 
