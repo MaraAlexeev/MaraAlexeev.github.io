@@ -12,7 +12,7 @@ In the summer of 2022, I a finished a masters in Biomedical Informatics at Harva
 
 Currently, I am the Director of Clinical Informatics at a health tech start up called Dandelion Health.
 
-I love learning human and computer languages. I’ve had a long love affair with Russian and German, and recently became interested in American Sign Language (and also the Russian Manual Alphabet!) and thinking about learning Norwegian. On the computer front, I’m always learning more R, Python, and SQL. I enjoy data visualization and reproducible analysis and research.
+I love learning human and computer languages. I’ve had a long love affair with Russian and German, and recently became interested in American Sign Language (and also the Russian Manual Alphabet!) and thinking about learning Norwegian. On the computer front, I’m always learning more  Python, R, and SQL. I enjoy data visualization and reproducible analysis and research.
 
 Interested in connecting or collaborating? Send me a message!
 
